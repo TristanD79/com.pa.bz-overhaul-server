@@ -152,7 +152,7 @@
                 0.2,
                 0.4
             ],
-            "cluster_size": 10,
+            "cluster_size": 20,
             "cluster_count_range": [
                 0,
                 15
@@ -187,10 +187,10 @@
             "layer": 5,
             "op": "BO_Add",
             "noise_range": [
-                0.6,
+                0.5,
                 0.8
             ],
-            "cluster_size": 10,
+            "cluster_size": 15,
             "cluster_count_range": [
                 0,
                 13
@@ -226,10 +226,9 @@
             "op": "BO_Add",
             "noise_range": [
                 0.4,
-                0.6
+                0.7
             ],
-            "threshold": 10,
-            "cluster_size": 10,
+            "cluster_size": 12,
             "cluster_count_range": [
                 0,
                 11
@@ -286,7 +285,7 @@
                 0.4,
                 0.6
             ],
-            "cluster_size": 10,
+            "cluster_size": 20,
             "cluster_count_range": [
                 0,
                 5
@@ -305,7 +304,7 @@
                 0.6,
                 0.8
             ],
-            "cluster_size": 10,
+            "cluster_size": 18,
             "cluster_count_range": [
                 0,
                 4
@@ -324,7 +323,7 @@
                 0.2,
                 0.4
             ],
-            "cluster_size": 10,
+            "cluster_size": 15,
             "cluster_count_range": [
                 0,
                 3
