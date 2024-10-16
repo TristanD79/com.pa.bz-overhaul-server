@@ -1,0 +1,135 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "NSDF Communication Tower",
+    "display_name": "!LOC:Communication Tower",
+    "description": "!LOC:Communication Tower - Detects nearby enemy land and air units.",
+    "si_name": "bz_communication_tower",
+    "max_health": 2000,
+    "build_metal_cost": 6,
+    "consumption": {
+        "energy": 20
+    },
+    "energy_efficiency_requirement": 0.9,
+    "atrophy_rate": 3.3333,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_LandHorizontal",
+    "area_build_type": "Sphere",
+    "area_build_separation": 100,
+    "unit_types": [
+        "UNITTYPE_Custom30",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Basic",
+        "UNITTYPE_Land",
+        "UNITTYPE_Recon",
+        "UNITTYPE_Radar"
+    ],
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 100,
+                    "uses_energy": false
+                },
+                {
+                    "layer": "surface_and_air",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 600,
+                    "uses_energy": true
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "/pa/units/land/nsdf_communication_tower/nsdf_communication_tower.papa",
+            "animations": {
+                "loop": "/pa/units/land/nsdf_communication_tower/nsdf_communication_tower_anim_loop.papa"
+            },
+            "animtree": "/pa/anim/anim_trees/generic_powered_or_unpowered_loop_anim_tree.json"
+        }
+    ],
+    "death_weapon": {
+        "ground_ammo_spec": "/pa/tools/unit_aoe_death_weapons/building_small_tool_unit_death_weapon.json"
+    },
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/radar"
+        },
+        "enabled": {
+            "audio_cue": "/SE/Buildings/radar_enabled"
+        },
+        "disabled": {
+            "audio_cue": "/SE/Buildings/radar_disabled"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/radar",
+            "effect_scale": 1.2
+        }
+    },
+    "fx_offsets": [
+        {
+            "type": "energy",
+            "filename": "/pa/units/land/nsdf_communication_tower/nsdf_communication_tower_on.pfx",
+            "bone": "bone_sub_rotator01",
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/land/nsdf_communication_tower/nsdf_communication_tower_on.pfx",
+            "bone": "bone_sub_rotator02",
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/land/nsdf_communication_tower/nsdf_communication_tower_on.pfx",
+            "bone": "bone_sub_rotator03",
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/land/nsdf_communication_tower/nsdf_communication_tower_on.pfx",
+            "bone": "bone_sub_rotator04",
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/radar"
+        }
+    },
+    "selection_icon": {
+        "diameter": 40.0
+    },
+    "mesh_bounds": [
+        37.7,
+        31.9,
+        40.0
+    ],
+    "placement_size": [
+        43,
+        40
+    ],
+    "TEMP_texelinfo": 37.512
+}

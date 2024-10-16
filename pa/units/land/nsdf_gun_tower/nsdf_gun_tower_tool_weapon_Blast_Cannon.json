@@ -1,0 +1,17 @@
+{
+    "base_spec": "/pa/tools/base_laser_turret/base_laser_turret.json",
+    "ammo_id": "/pa/ammo/Blast_Cannon_ammo/Blast_Cannon_ammo.json",
+    "rate_of_fire": 1.0,
+    "max_range": 200,
+    "yaw_rate": 360,
+    "pitch_rate": 90,
+    "yaw_range": 360,
+    "pitch_range": 90,
+    "auto_attack": true,
+    "spread_fire": false,
+    "idle_aim_delay": -1,
+    "target_layers": [
+        "WL_LandHorizontal",
+        "WL_Air"
+    ]
+}

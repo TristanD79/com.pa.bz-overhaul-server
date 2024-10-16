@@ -1,0 +1,23 @@
+{
+    "base_spec": "/pa/tools/base_shell_turret/base_shell_turret.json",
+    "ammo_id": "/pa/ammo/TAG_Cannon_ammo/TAG_Cannon_ammo.json",
+    "carpet_fire": true,
+    "carpet_wait_for_full_ammo": true,
+    "ammo_per_shot": 3.5,
+    "ammo_capacity": 25,
+    "ammo_demand": 7,
+    "ammo_source": "energy",
+    "rate_of_fire": 5.0,
+    "max_range": 200,
+    "yaw_rate": 60,
+    "pitch_rate": 45,
+    "yaw_range": 360,
+    "pitch_range": 40,
+    "spread_fire": true,
+    "auto_attack": true,
+    "idle_aim_delay": 1.0,
+    "target_layers": [
+        "WL_LandHorizontal",
+        "WL_Air"
+    ]
+}

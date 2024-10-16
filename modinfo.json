@@ -1,0 +1,39 @@
+{
+    "context": "server",
+    "identifier": "com.pa.bz-overhaul-server",
+    "display_name": "Battlezone: RTS Tactics",
+    "description": "A full conversion mod that brings both factions from Battlezone to PA.",
+    "author": "Tristan",
+    "version": "0.5",
+    "build": "116982",
+    "date": "2024-02-21",
+    "signature": "not yet implemented",
+    "forum": "",
+    "icon": "https://static.wikia.nocookie.net/battlezone/images/7/79/BDog_Poster.gif",
+    "priority": 100,
+    "category": [
+        "titans", 
+        "units",
+        "faction" 
+    ],
+    "dependencies": [
+        "com.pa.bz-overhaul-client"
+    ],
+    "scenes": {
+        "system_editor": [
+            "coui://ui/mods/com.pa.bz-overhaul/system_editor.js"
+        ],
+		"shared_build": [
+            "coui://ui/mods/com.pa.bz-overhaul/shared_build.js"
+		],
+        "new_game": [
+            "coui://ui/mods/com.pa.bz-overhaul/new_game.js"
+        ],
+		"icon_atlas": [
+			"coui://ui/mods/com.pa.bz-overhaul/icon_atlas.js"
+        ],
+        "live_game": [
+            "coui://ui/mods/com.pa.bz-overhaul/bz_map_effects.js"
+        ]
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "platoon_templates": {
+    "TAO_Orbital_Offense_Transfer": {
+      "units": [
+        {
+          "unit_types": "Orbital & (Fighter | LaserPlatform)",
+          "min_count": 1,
+          "max_count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "CCA Silo",
+    "display_name": "!LOC:Silo",
+    "description": "!LOC:Storage - Increases maximum metal storage capacity.",
+    "si_name": "bz_silo",
+    "max_health": 2000,
+    "build_metal_cost": 4,
+    "atrophy_rate": 45.0,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_LandHorizontal",
+    "area_build_type": "Line",
+    "area_build_separation": 2.0,
+    "alt_area_build_type": "Line",
+    "alt_area_build_separation": 4.0,
+    "storage": {
+        "metal": 20
+    },
+    "unit_types": [
+        "UNITTYPE_Custom31",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_Basic",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Land",
+        "UNITTYPE_Economy"
+    ],
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 60.0
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "/pa/units/land/cca_silo/cca_silo.papa"        
+        }
+    ],
+    "death_weapon": {
+        "ground_ammo_spec": "/pa/tools/unit_aoe_death_weapons/building_small_tool_unit_death_weapon.json"
+    },
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/energy"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/Factory",
+            "effect_spec": "/pa/effects/specs/default_building_explosion_large.pfx",
+            "effect_scale": 0.5
+        }
+    },
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/metal"
+        }
+    },
+    "selection_icon": {
+        "diameter": 40.0
+    },
+    "mesh_bounds": [
+        29.3,
+        31.1,
+        8.58
+    ],
+    "placement_size": [
+        34,
+        36
+    ],
+    "TEMP_texelinfo": 29.5499
+}

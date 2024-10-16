@@ -1,0 +1,74 @@
+<div
+  id="bz-welcome"
+  style="display: none"
+  data-bind="click:bzCloseWelcome"
+>
+  <div id="bz-welcome-container">
+    <div id="bz-welcome-content">
+      <img
+        id="bz-welcome-logo"
+        src="coui://ui/mods/com.pa.bz-overhaul/logos/logo.png"
+      />
+      <div id="bz-welcome-message">
+        <!-- ko if: bzClientModLoaded -->
+        <div>
+          <loc
+            >Battlezone: RTS Tactics (Server) completely overhauls Planetary Annihilation adding multiple factions.</loc
+          >
+        </div>
+        <div>
+          <loc>Select a blue commander for NSDF forces, and a red Commander for CCA forces.</loc>
+        </div>
+        <!-- /ko -->
+        <!-- ko ifnot: bzClientModLoaded -->
+        <div>
+          <loc
+            >It looks like you don't have the Total Annihilation: Origins overhaul client mod
+            installed.</loc
+          >
+        </div>
+        <div>
+          <loc
+            >You won't be able to play without it, but installing is easy!</loc
+          >
+        </div>
+        <!-- /ko -->
+      </div>
+      <div id="bz-welcome-links">
+        <a
+          data-bind="click: bzUrlClicked, clickBubble: false"
+          href="http://palobby.com/article/bz-overhaul-mod/"
+        >
+          <loc>Learn More</loc>
+        </a>
+        <a
+          data-bind="click: bzUrlClicked, clickBubble: false"
+          href="insert_link_to_pa_forums_mod_thread"
+        >
+          <loc>Discuss</loc>
+        </a>
+      </div>
+      <!-- ko if: bzClientModLoaded -->
+      <div
+        id="bz-welcome-donotshow"
+        data-bind="click: bzToggleDoNotShowWelcome"
+      >
+        <label for="bz-welcome-checkbox">
+          <loc>Do not show this again</loc>
+        </label>
+        <input
+          id="bz-welcome-checkbox"
+          type="checkbox"
+          style="pointer-events: none !important"
+          data-bind="checked: bzDoNotShowWelcome"
+        />
+      </div>
+      <!-- /ko -->
+      <div id="bz-welcome-close">
+        <div>
+          <loc>click or press space to close</loc>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

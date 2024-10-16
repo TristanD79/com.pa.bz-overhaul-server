@@ -1,0 +1,18 @@
+{
+    "ammo_type": "PBAOE",
+    "damage": 1200,
+    "splash_damage": 1200,
+    "splash_radius": 38.2,
+    "full_damage_splash_radius": 0,
+    "splash_damages_allies": true,
+    "sim_fire_effect": "/pa/units/land/core_roach/core_roach_ammo_explosion_ent.json",
+    "burn_damage": 1200,
+    "burn_radius": 38.2,
+    "damage_volume": {
+        "initial_radius": 12.6,
+        "radius_velocity": 200.0,
+        "radius_accel": -40.0,
+        "delay": 0.0,
+        "burnable_remove_radius": 34.4
+    }
+}

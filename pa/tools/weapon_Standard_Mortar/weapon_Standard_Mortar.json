@@ -1,0 +1,28 @@
+{
+    "base_spec": "/pa/tools/base_bot_weapon/base_bot_weapon.json",
+    "ammo_id": "/pa/ammo/Standard_Mortar_ammo/Standard_Mortar_ammo.json",
+    "max_firing_velocity": 180,
+    "min_firing_velocity": 80,
+    "rate_of_fire": 0.5,
+    "idle_aim_delay": 0.1,
+    "max_range": 300,
+    "yaw_rate": 120,
+    "pitch_rate": 90,
+    "yaw_range": 360,
+    "pitch_range": 90,
+    "auto_attack": false,
+    "manual_fire": true,
+    "auto_task_type": "none",
+    "arc_type": "ARC_High",
+    "target_layers": [
+        "WL_LandHorizontal"
+    ],
+    "target_priorities": [
+        "Structure & SurfaceDefense",
+        "Structure & Defense",
+        "Commander",
+        "Mobile - Air",
+        "Structure - Wall",
+        "Wall"
+    ]
+}

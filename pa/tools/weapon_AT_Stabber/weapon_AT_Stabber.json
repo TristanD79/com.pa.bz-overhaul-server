@@ -1,0 +1,17 @@
+{
+    "base_spec": "/pa/tools/base_shell_turret/base_shell_turret.json",
+    "ammo_id": "/pa/ammo/AT_Stabber_ammo/AT_Stabber_ammo.json",
+    "rate_of_fire": 3.33,
+    "max_range": 150,
+    "yaw_rate": 90,
+    "pitch_rate": 45,
+    "yaw_range": 360,
+    "pitch_range": 40,
+    "spread_fire": true,
+    "auto_attack": true,
+    "idle_aim_delay": 1.0,
+    "target_layers": [
+        "WL_LandHorizontal",
+        "WL_Air"
+    ]
+}

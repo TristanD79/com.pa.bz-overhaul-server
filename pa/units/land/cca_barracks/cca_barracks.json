@@ -1,0 +1,82 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "CCA Barracks",
+    "display_name": "!LOC:Barracks",
+    "description": "!LOC:Barracks - Houses and deploys infantrymen.",
+    "si_name": "artillery_unit_launcher",
+    "max_health": 5000,
+    "build_metal_cost": 8,
+    "atrophy_rate": 25,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_LandHorizontal",
+    "unit_types": [
+        "UNITTYPE_Custom31",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Basic",
+        "UNITTYPE_Artillery",
+        "UNITTYPE_Defense"
+    ],
+    "command_caps": [
+        "ORDER_Attack"
+    ],
+    "guard_layer": "WL_AnySurface",
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 50
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "/pa/units/land/cca_barracks/cca_barracks.papa",
+            "animtree": "/pa/anim/anim_trees/barracks_anim_tree.json"
+        }
+    ],
+    "nearby_target_tick_update_interval": 15,
+    "tools": [
+        {
+            "spec_id": "/pa/units/land/cca_barracks/cca_barracks_tool_weapon.json",
+            "aim_bone": "bone_root",
+            "muzzle_bone": "bone_root"
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/structure_small"
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/structure/artillery_short_fire",
+            "effect_spec": "/pa/units/land/cca_barracks/cca_barracks_fire.pfx socket_muzzle"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/structure_small",
+            "effect_scale": 0.6
+        }
+    },
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/artillery"
+        }
+    },
+    "selection_icon": {
+        "diameter": 16.0
+    },
+    "mesh_bounds": [
+        8.72,
+        11.2,
+        5.68
+    ],
+    "placement_size": [
+        12,
+        14
+    ],
+    "TEMP_texelinfo": 38.831
+}

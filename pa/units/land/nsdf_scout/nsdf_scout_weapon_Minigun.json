@@ -1,0 +1,17 @@
+{
+    "base_spec": "/pa/tools/weapon_Minigun/weapon_Minigun.json",
+    "ammo_id": "/pa/ammo/Minigun_ammo/Minigun_ammo.json",
+    "rate_of_fire": 5.0,
+    "max_range": 120,
+    "yaw_rate": 150,
+    "pitch_rate": 45,
+    "yaw_range": 360,
+    "pitch_range": 40,
+    "spread_fire": true,
+    "auto_attack": true,
+    "idle_aim_delay": 1.0,
+    "target_layers": [
+        "WL_LandHorizontal",
+        "WL_Air"
+    ]
+}

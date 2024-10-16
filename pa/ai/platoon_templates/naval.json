@@ -1,0 +1,25 @@
+{
+  "platoon_templates": {
+    "TAO_Naval_Attack": {
+      "units": [
+        {
+          "unit_types": "(Naval & Mobile) - Fabber - Construction",
+          "min_count": 1,
+          "max_count": -1
+        },
+        {
+          "unit_types": "Naval & Mobile & Construction",
+          "min_count": 0,
+          "percent": 0.2,
+          "squad": "Defense"
+        },
+        {
+          "unit_types": "Naval & RadarJammer & Mobile - Titan",
+          "min_count": 0,
+          "percent": 0.01,
+          "squad": "Defense"
+        }
+      ]
+    }
+  }
+}

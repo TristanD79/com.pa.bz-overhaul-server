@@ -1,0 +1,23 @@
+{
+    "base_spec": "/pa/ammo/base_laser_blast/base_laser_blast.json",
+    "fx_trail": {
+        "filename": "/pa/effects/specs/commander_laser_ammo.pfx"
+    },
+    "events": {
+        "died": {
+            "audio_cue": "/SE/Impacts/laser_blast",
+            "effect_specs": "/pa/effects/specs/default_proj_explosion.pfx"
+        },
+        "spawned": {
+            "audio_cue": "/SE/Weapons/commander/Commander_gun_fire_laser"
+        }
+    },
+    "damage": 70,
+    "splash_damage": 70,
+    "splash_radius": 4.4,
+    "full_damage_splash_radius": 0.44,
+    "splash_damages_allies": true,
+    "initial_velocity": 111.1,
+    "max_velocity": 111.1,
+    "lifetime": 3
+}

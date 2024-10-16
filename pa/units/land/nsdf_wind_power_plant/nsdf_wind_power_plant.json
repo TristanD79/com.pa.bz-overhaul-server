@@ -1,0 +1,82 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "NSDF Wind Power Plant",
+    "display_name": "!LOC:Wind Power Plant",
+    "description": "!LOC:Basic Economy - Produces energy using wind.",
+    "si_name": "energy_plant",
+    "max_health": 2000,
+    "build_metal_cost": 6,
+    "atrophy_rate": 45.0,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_LandHorizontal",
+    "area_build_type": "Line",
+    "area_build_separation": 1.0,
+    "alt_area_build_type": "Line",
+    "alt_area_build_separation": 2.0,
+    "production": {
+        "energy": 20
+    },
+    "unit_types": [
+        "UNITTYPE_Custom30",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Basic",
+        "UNITTYPE_Land",
+        "UNITTYPE_Economy",
+        "UNITTYPE_EnergyProduction"
+    ],
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 50.0
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "/pa/units/land/nsdf_wind_power_plant/nsdf_wind_power_plant.papa"
+        }
+    ],
+    "death_weapon": {
+        "ground_ammo_spec": "/pa/tools/unit_aoe_death_weapons/building_small_tool_unit_death_weapon.json"
+    },
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/energy"
+        },
+        "enabled":{
+            "audio_cue":"/SE/Buildings/energy_enabled"
+         },
+         "disabled":{
+            "audio_cue":"/SE/Buildings/energy_disabled"
+         },
+        "died": {
+            "audio_cue": "/SE/Death/structure_small",
+            "effect_scale": 1.0
+        }
+    },
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/energy"
+        }
+    },
+    "selection_icon": {
+        "diameter": 18.0
+    },
+    "mesh_bounds": [
+        13.0,
+        9.1,
+        5.87
+    ],
+    "placement_size": [
+        18,
+        14
+    ],
+    "TEMP_texelinfo": 37.5665
+}

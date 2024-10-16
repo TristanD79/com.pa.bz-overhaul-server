@@ -1,0 +1,20 @@
+{
+    "tool_type": "TOOL_BuildArm",
+    "max_range": 40,
+    "construction_demand": {
+        "energy": 25,
+        "metal": 0.5
+    },
+    "yaw_rate": 3600,
+    "pitch_rate": 3600,
+    "yaw_range": 360,
+    "pitch_range": 360,
+    "auto_patrol": true,
+    "assist_layers": [
+        "WL_LandHorizontal",
+        "WL_Air"
+    ],
+    "reclaim_types": [
+        "Unit"
+    ]
+}

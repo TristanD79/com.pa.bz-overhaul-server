@@ -1,0 +1,304 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "CCA Recycler",
+    "display_name": "CCA Recycler",
+    "description": "!LOC:Mobile Unit Facotry - The hub of the CCA forces. Builds basic units.",
+    "si_name": "bz_recycler",
+    "max_health": 12000,
+    "build_metal_cost": 1000,
+    "production": {
+        "energy": 25,
+        "metal": 0.1
+    },
+    "storage": {
+        "energy": 1000,
+        "metal": 50
+    },
+    "rolloff_dirs": [
+        [
+            0,
+            -1,
+            0
+        ]
+    ],
+    "wait_to_rolloff_time": 0,
+    "factory_cooldown_time": 3.5,
+    "buildable_types": "(Custom31 & CmdBuild & FactoryBuild)",
+    "unit_types": [
+        "UNITTYPE_Custom31",
+        "UNITTYPE_Commander",
+        "UNITTYPE_Basic",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Factory",
+        "UNITTYPE_Construction",
+        "UNITTYPE_Offense",
+        "UNITTYPE_Land",
+        "UNITTYPE_NoBuild",
+        "UNITTYPE_Important"
+    ],
+    "command_caps": [
+        "ORDER_Move",
+        "ORDER_Patrol",
+        "ORDER_FactoryBuild",
+        "ORDER_Reclaim",
+        "ORDER_Repair",
+        "ORDER_Attack",
+        "ORDER_Assist"
+    ],
+    "guard_layer": "WL_LandHorizontal",
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 50
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/commanders/cca_recycler/cca_recycler.papa",
+        "animations": {
+            "deploy": "/pa/units/commanders/cca_recycler/cca_recycler_anim_deploy.papa"
+        },
+        "animtree": "/pa/anim/anim_trees/recycler_anim_tree.json",
+        "walk_speed": 0.0
+    },
+    "tools": [
+        {
+            "spec_id": "/pa/tools/recycler_build_arm/recycler_build_arm.json",
+            "aim_bone": "bone_root"
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/land"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/land_large",
+            "effect_spec": "/pa/effects/specs/default_building_explosion_large.pfx",
+            "effect_scale": 1.0
+        }
+    },
+    "fx_offsets": [
+        {
+            "type": "build",
+            "filename": "/pa/effects/specs/recycler_spray.pfx",
+            "bone": "socket_muzzle01",
+            "offset": [
+                0,
+                0,
+                0
+            ],
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "build",
+            "filename": "/pa/effects/specs/recycler_spray.pfx",
+            "bone": "socket_muzzle02",
+            "offset": [
+                0,
+                0,
+                0
+            ],
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "build",
+            "filename": "/pa/effects/specs/recycler_spray.pfx",
+            "bone": "socket_muzzle03",
+            "offset": [
+                0,
+                0,
+                0
+            ],
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "build",
+            "filename": "/pa/effects/specs/recycler_spray.pfx",
+            "bone": "socket_muzzle04",
+            "offset": [
+                0,
+                0,
+                0
+            ],
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "build",
+            "filename": "/pa/effects/specs/recycler_spray.pfx",
+            "bone": "socket_muzzle05",
+            "offset": [
+                0,
+                0,
+                0
+            ],
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "build",
+            "filename": "/pa/effects/specs/construction_glow.pfx",
+            "bone": "bone_root",
+            "offset": [
+                0,
+                0,
+                4.0
+            ],
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "audio": {
+        "loops": {
+            "build": {
+                "cue": "/SE/Construction/Commander_contruction_beam_loop",
+                "flag": "build_target_changed",
+                "should_start_func": "has_build_target",
+                "should_stop_func": "no_build_target"
+            }
+        },
+        "selection_response": {
+            "cue": "/SE/Selection/structure/factory"
+        }
+    },
+    "headlights": [
+        {
+            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+            "offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "orientation": [
+                0.0,
+                70.0,
+                0.0
+            ],
+            "near_width": 2.0,
+            "near_height": 2.0,
+            "near_distance": 2.0,
+            "far_distance": 25.0,
+            "color": [
+                0.9,
+                0.92,
+                1.0
+            ],
+            "intensity": 2.0,
+            "bone": "bone_headlight01"
+        },
+        {
+            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+            "offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "orientation": [
+                0.0,
+                70.0,
+                0.0
+            ],
+            "near_width": 2.0,
+            "near_height": 2.0,
+            "near_distance": 2.0,
+            "far_distance": 25.0,
+            "color": [
+                0.9,
+                0.92,
+                1.0
+            ],
+            "intensity": 2.0,
+            "bone": "bone_headlight02"
+        },
+        {
+            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+            "offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "orientation": [
+                0.0,
+                70.0,
+                0.0
+            ],
+            "near_width": 2.0,
+            "near_height": 2.0,
+            "near_distance": 2.0,
+            "far_distance": 25.0,
+            "color": [
+                0.9,
+                0.92,
+                1.0
+            ],
+            "intensity": 2.0,
+            "bone": "bone_headlight03"
+        },
+        {
+            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+            "offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "orientation": [
+                0.0,
+                70.0,
+                0.0
+            ],
+            "near_width": 2.0,
+            "near_height": 2.0,
+            "near_distance": 2.0,
+            "far_distance": 25.0,
+            "color": [
+                0.9,
+                0.92,
+                1.0
+            ],
+            "intensity": 2.0,
+            "bone": "bone_headlight04"
+        }
+    ],
+    "catalog_object_name": "InvictusCommander",
+    "client": {
+        "ui": {
+            "image": "/ui/main/shared/img/commanders/img_cca_default.png",
+            "thumb_image": "/ui/main/shared/img/commanders/thumbs/img_cca_default_thumb.png",
+            "profile_image": "/ui/main/shared/img/commanders/profiles/profile_cca_default.png"
+        }
+    },
+    "selection_icon": {
+        "diameter": 65
+    },
+    "mesh_bounds": [
+        29.0,
+        70.0,
+        21.9
+    ]
+}

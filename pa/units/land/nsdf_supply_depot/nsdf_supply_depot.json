@@ -1,0 +1,95 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "NSDF Supply Depot",
+    "display_name": "!LOC:Supply Depot",
+    "description": "!LOC:Supply Depot - Replenishses ammo.",
+    "si_name": "bz_supply_depot",
+    "max_health": 2000,
+    "build_metal_cost": 5,
+    "atrophy_rate": 20.0,
+    "atrophy_cool_down": 0.5,
+    "wreckage_health_frac": 0.0,
+    "spawn_layers": "WL_LandHorizontal",
+    "area_build_separation": 4.0,
+    "unit_types": [
+        "UNITTYPE_Custom30",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Basic",
+        "UNITTYPE_Land"
+    ],
+    "physics": {
+        "type": "Structure",
+        "shape": "Box",
+        "collision_layers": "WL_LandHorizontal",
+        "radius": 1,
+        "air_friction": 1.0,
+        "allow_pushing": false,
+        "push_sideways": false,
+        "allow_underground": false
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 50
+                }
+            ]
+        }
+    },
+    "structure": {
+        "cost_stamp": {
+            "shape": "box",
+            "type_data": [
+                {
+                    "move_type": "land-small",
+                    "stamp_type": "wall"
+                },
+                {
+                    "move_type": "amphibious",
+                    "stamp_type": "wall"
+                },
+                {
+                    "move_type": "deepwater",
+                    "stamp_type": "wall"
+                },
+                {
+                    "move_type": "underwater",
+                    "stamp_type": "wall"
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "/pa/units/land/nsdf_supply_depot/nsdf_supply_depot.papa"
+        }
+    ],
+       "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/structure_small"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/Factory",
+            "effect_spec": "/pa/effects/specs/default_building_explosion_large.pfx",
+            "effect_scale": 1.0
+        }
+    },
+    "selection_icon": {
+        "diameter": 38
+    },
+    "mesh_bounds": [
+        30.4,
+        23.3,
+        14.1
+    ],
+    "placement_size": [
+        36,
+        33
+    ],
+    "TEMP_texelinfo": 84.2968
+}

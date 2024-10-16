@@ -1,0 +1,22 @@
+{
+    "base_spec": "/pa/tools/engineer_build_arm/engineer_build_arm.json",
+    "max_range": 0.5,
+    "construction_demand": {
+        "energy": 1.0,
+        "metal": 1.0
+    },
+    "yaw_rate": 360,
+    "pitch_rate": 360,
+    "yaw_range": 360,
+    "pitch_range": 360,
+    "assist_layers": [
+        "WL_LandHorizontal"
+    ],
+    "reclaim_layers": [
+        "WL_LandHorizontal"
+    ],
+    "reclaim_types": [
+        "Wreckage",
+        "Feature"
+    ]
+}

@@ -1,0 +1,140 @@
+{
+    "blend_root": {
+        "type": "unit_state",
+        "nodes": {
+            "being_built": {
+                "type": "playback",
+                "looping": false,
+                "anim_name": "undeployed"
+            },
+            "living": {
+                "type": "sequence",
+                "entries": [
+                    {
+                        "type": "sequence_entry",
+                        "name": "deploy",
+                        "node": {
+                            "type": "playback",
+                            "anim_name": "deploy",
+                            "looping": false
+                        },
+                        "transitions": [
+                            {
+                                "transition_forward": {
+                                    "func": "anim_complete",
+                                    "target": "deployed_loop"
+                                },
+                                "transition_reverse": {
+                                    "func": "anim_complete",
+                                    "target": "deployed_loop"
+                                }
+                            }
+                        ],
+                        "reset": "playback_reset"
+                    },
+                    {
+                        "type": "sequence_entry",
+                        "name": "deployed_loop",
+                        "node": {
+                            "type": "playback",
+                            "anim_name": "deployed",
+                            "looping": true
+                        },
+                        "transitions": [
+                            {
+                                "transition_forward": {
+                                    "func": "false_func",
+                                    "target": "deploy"
+                                },
+                                "transition_reverse": {
+                                    "func": "false_func",
+                                    "target": "deploy"
+                                }
+                            }
+                        ],
+                        "reset": "playback_reset"
+                    }
+                ],
+                "transition_seek": {
+                    "func": "true_func",
+                    "true_target": "deployed_ani",
+                    "false_target": "deployed_ani"
+                }
+            },
+            "dead": {
+                "type": "sequence",
+                "entries": [
+                    {
+                        "type": "item",
+                        "name": "death",
+                        "node": {
+                            "type": "playback",
+                            "anim_name": "deployed_idle_ani",
+                            "looping": false
+                        },
+                        "transitions": [
+                            {
+                                "transition_forward": {
+                                    "func": "anim_complete",
+                                    "target": "dead"
+                                },
+                                "transition_reverse": {
+                                    "func": "anim_complete",
+                                    "target": "dead"
+                                }
+                            }
+                        ],
+                        "reset": "playback_reset"
+                    },
+                    {
+                        "type": "item",
+                        "name": "dead",
+                        "node": {
+                            "type": "playback",
+                            "anim_name": "dead",
+                            "looping": false
+                        },
+                        "transitions": [
+                            {
+                                "transition_forward": {
+                                    "func": "false_func",
+                                    "target": "death"
+                                },
+                                "transition_reverse": {
+                                    "func": "anim_complete",
+                                    "target": "death"
+                                }
+                            }
+                        ],
+                        "reset": "playback_reset"
+                    }
+                ]
+            },
+                "ghost": {
+                    "type": "item",
+                    "anim_name": "deployed_idle_ani",
+                    "looping": false
+                }
+            }
+        },
+        "skeleton_controls": [
+            {
+                "type": "fader",
+                "lerp_func": "is_active",
+                "child": {
+                    "type": "procedural_aim",
+                    "rotation_bone": "bone_turret",
+                    "rotation_axis": "z"
+                }
+            },
+            {
+                "type": "fader",
+                "lerp_func": "is_active",
+                "child": {
+                    "type": "procedural_aim",
+                    "rotation_bone": "bone_pitch",
+                    "rotation_axis": "x"
+                }
+            }
+        ]
+    }

@@ -1,0 +1,391 @@
+{
+  "build_list": [
+    {
+      "name": "Core Teleport Commander To Planet",
+      "instance_count": 1,
+      "priority": 1001,
+      "builders": ["CoreT0Commander"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "WantCommanderOffPlanetByTeleporter",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & Teleporter",
+            "compare0": ">",
+            "value0": 0
+          }
+        ]
+      ],
+      "task_type": "TeleportFabberToPlanet"
+    },
+    {
+      "name": "Core Move Fabber To Planet",
+      "instance_count": 1,
+      "priority": 800,
+      "builders": [
+        "CoreT1KbotFabber",
+        "CoreT1VehicleFabber",
+        "CoreT1AirFabber",
+        "CoreT2KbotFabber",
+        "CoreT2VehicleFabber",
+        "CoreT2AirFabber"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "PlanetWithoutPresence",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Fabber",
+            "compare0": ">=",
+            "value0": 2
+          },
+          {
+            "test_type": "UnitPoolCount",
+            "unit_type_string0": "Orbital & Transport",
+            "compare0": ">=",
+            "value0": 1
+          }
+        ]
+      ],
+      "task_type": "TransportToPlanet"
+    },
+    {
+      "name": "Core Move Orbital Fabber To Planet",
+      "instance_count": 1,
+      "priority": 800,
+      "builders": ["OrbitalFabber"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "PlanetOrGasGiantWithoutPresence",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Orbital & Fabber",
+            "compare0": ">=",
+            "value0": 2
+          }
+        ]
+      ],
+      "task_type": "OrbitalFabberMoveToPlanet"
+    },
+    {
+      "name": "Core Move Orbital Fabber To Safe Planet",
+      "instance_count": 1,
+      "priority": 800,
+      "builders": ["OrbitalFabber"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "SafePlanetOrGasGiantWithoutPresence",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Orbital & Factory",
+            "compare0": ">=",
+            "value0": 1
+          }
+        ]
+      ],
+      "task_type": "OrbitalFabberMoveToSafePlanet"
+    },
+    {
+      "name": "Core Galactic Gate - Need Land",
+      "to_build": "CoreT0StructureTeleporter",
+      "instance_count": 1,
+      "shared_instance_count": "Teleporter",
+      "priority": 0,
+      "min_num_assisters": 3,
+      "max_num_assisters": 5,
+      "builders": [
+        "CoreT0Commander",
+        "CoreT1FabberNoNaval",
+        "CoreT2FabberNoNaval",
+        "OrbitalFabber"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "ThisPlanetNeedsLandUnitAssistance",
+            "boolean": true
+          },
+          {
+            "test_type": "OtherPlanetCanProvideLandUnitAssistance",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & Teleporter",
+            "compare0": "<",
+            "value0": 1
+          }
+        ],
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "OtherPlanetNeedsLandUnitAssistance",
+            "boolean": true
+          },
+          {
+            "test_type": "PlanetHighestEnemyArmyThreatRatio",
+            "string0": "Land",
+            "string1": "Land",
+            "compare0": "<",
+            "value0": 0.8
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & Teleporter",
+            "compare0": "<",
+            "value0": 1
+          }
+        ],
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "WantCommanderOffPlanet",
+            "boolean": true
+          },
+          {
+            "test_type": "PresenceOnOtherPlanet",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & Teleporter",
+            "compare0": "<",
+            "value0": 1
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 6,
+        "placement_type": "FromBaseCenter",
+        "threat": {
+          "influence_type": "AntiSurface",
+          "compare_type": "<",
+          "radius": 10,
+          "value": 50
+        }
+      }
+    },
+    {
+      "name": "Core Galactic Gate - Need Fabber",
+      "to_build": "CoreT0StructureTeleporter",
+      "instance_count": 1,
+      "shared_instance_count": "Teleporter",
+      "priority": 0,
+      "min_num_assisters": 3,
+      "max_num_assisters": 5,
+      "builders": ["OrbitalFabber"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & Teleporter",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Fabber - Air",
+            "compare0": "<",
+            "value0": 1
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 6,
+        "placement_type": "FromBaseCenter",
+        "threat": {
+          "influence_type": "AntiSurface",
+          "compare_type": "<",
+          "radius": 10,
+          "value": 50
+        }
+      }
+    },
+    {
+      "name": "Core Galactic Gate - Other Planet Needs Fabber",
+      "to_build": "CoreT0StructureTeleporter",
+      "instance_count": 1,
+      "shared_instance_count": "Teleporter",
+      "priority": 0,
+      "min_num_assisters": 1,
+      "max_num_assisters": 5,
+      "builders": [
+        "CoreT0Commander",
+        "CoreT1FabberNoNaval",
+        "CoreT2FabberNoNaval",
+        "OrbitalFabber"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "PlanetWithoutFabberWithTeleporter",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & Teleporter",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Fabber - Air",
+            "compare0": ">=",
+            "value0": 2
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 6,
+        "placement_type": "FromBaseCenter",
+        "threat": {
+          "influence_type": "AntiSurface",
+          "compare_type": "<",
+          "radius": 10,
+          "value": 50
+        }
+      }
+    },
+    {
+      "name": "Core Galactic Gate",
+      "to_build": "CoreT0StructureTeleporter",
+      "instance_count": 1,
+      "shared_instance_count": "Teleporter",
+      "priority": 0,
+      "builders": [
+        "CoreT0Commander",
+        "CoreT1FabberNoNaval",
+        "CoreT2FabberNoNaval",
+        "OrbitalFabber"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "PresenceOnOtherPlanet",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & Teleporter",
+            "compare0": "<",
+            "value0": 1
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 6,
+        "placement_type": "FromBaseCenter",
+        "threat": {
+          "influence_type": "AntiSurface",
+          "compare_type": "<",
+          "radius": 10,
+          "value": 50
+        }
+      }
+    },
+    {
+      "name": "Core Galactic Gate - Not Alone",
+      "to_build": "CoreT0StructureTeleporter",
+      "instance_count": 1,
+      "shared_instance_count": "Teleporter",
+      "priority": 0,
+      "builders": [
+        "CoreT0Commander",
+        "CoreT1FabberNoNaval",
+        "CoreT2FabberNoNaval",
+        "OrbitalFabber"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "AloneOnPlanet",
+            "boolean": false
+          },
+          {
+            "test_type": "PresenceOnOtherPlanet",
+            "boolean": true
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & Teleporter",
+            "compare0": "<",
+            "value0": 1
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 6,
+        "placement_type": "FromBaseCenter",
+        "threat": {
+          "influence_type": "AntiSurface",
+          "compare_type": "<",
+          "radius": 10,
+          "value": 50
+        }
+      }
+    },
+    {
+      "name": "Core Teleport Fabber To Planet",
+      "instance_count": 1,
+      "priority": 801,
+      "builders": [
+        "CoreT1KbotFabber",
+        "CoreT1VehicleFabber",
+        "CoreT2KbotFabber",
+        "CoreT2VehicleFabber"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "PlanetWithoutFabberWithTeleporter",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & Teleporter",
+            "compare0": ">",
+            "value0": 0
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Fabber - Air",
+            "compare0": ">=",
+            "value0": 2
+          }
+        ]
+      ],
+      "task_type": "TeleportFabberToPlanet"
+    }
+  ]
+}

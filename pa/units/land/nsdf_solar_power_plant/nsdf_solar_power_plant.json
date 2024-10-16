@@ -1,0 +1,89 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "NSDF Solar Power Plant",
+    "display_name": "!LOC:Solar Power Plant",
+    "description": "!LOC:Economy - Produces energy using radiant light.",
+    "si_name": "energy_plant",
+    "max_health": 1500,
+    "build_metal_cost": 4,
+    "atrophy_rate": 45.0,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_LandHorizontal",
+    "area_build_type": "Line",
+    "area_build_separation": 1.0,
+    "alt_area_build_type": "Line",
+    "alt_area_build_separation": 2.0,
+    "production": {
+        "energy": 20
+    },
+    "unit_types": [
+        "UNITTYPE_Custom30",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Basic",
+        "UNITTYPE_Land",
+        "UNITTYPE_Economy",
+        "UNITTYPE_EnergyProduction"
+    ],
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 60.0
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "/pa/units/land/nsdf_solar_power_plant/nsdf_solar_power_plant.papa",
+            "animations": {
+                "deploy": "/pa/units/land/nsdf_solar_power_plant/nsdf_solar_power_plant_anim_deploy.papa",
+                "deployed": "/pa/units/land/nsdf_solar_power_plant/nsdf_solar_power_plant_anim_deployed.papa",
+                "undeployed": "/pa/units/land/nsdf_solar_power_plant/nsdf_solar_power_plant_anim_undeployed.papa",
+                "dead": "/pa/units/land/nsdf_solar_power_plant/nsdf_solar_power_plant_dead.papa"
+            },
+            "animtree": "/pa/anim/anim_trees/deploy_anim_tree.json"
+        }
+    ],
+    "death_weapon": {
+        "ground_ammo_spec": "/pa/tools/unit_aoe_death_weapons/building_small_tool_unit_death_weapon.json"
+    },
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/energy"
+        },
+        "enabled":{
+            "audio_cue":"/SE/Buildings/energy_enabled"
+         },
+         "disabled":{
+            "audio_cue":"/SE/Buildings/energy_disabled"
+         },
+        "died": {
+            "audio_cue": "/SE/Death/structure_small",
+            "effect_scale": 1.0
+        }
+    },
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/energy"
+        }
+    },
+    "selection_icon": {
+        "diameter": 27.0
+    },
+    "mesh_bounds": [
+        23.4,
+        23.4,
+        11.8
+    ],
+    "placement_size": [
+        25,
+        25
+    ],
+    "TEMP_texelinfo": 6.0878
+}

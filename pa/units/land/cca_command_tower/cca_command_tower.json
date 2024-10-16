@@ -1,0 +1,89 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "CCA Command Tower",
+    "display_name": "!LOC:Command Tower",
+    "description": "!LOC:Command Tower - Large visual radius. Detects nearby enemy land and air units.",
+    "si_name": "bz_command_tower",
+    "max_health": 10000,
+    "build_metal_cost": 10,
+    "consumption": {
+        "energy": 40
+    },
+    "energy_efficiency_requirement": 0.9,
+    "atrophy_rate": 3.3333,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_LandHorizontal",
+    "area_build_type": "Sphere",
+    "area_build_separation": 100,
+    "unit_types": [
+        "UNITTYPE_Custom31",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Basic",
+        "UNITTYPE_Land",
+        "UNITTYPE_Recon",
+        "UNITTYPE_Radar"
+    ],
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 200,
+                    "uses_energy": false
+                },
+                {
+                    "layer": "surface_and_air",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 600,
+                    "uses_energy": true
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "/pa/units/land/cca_command_tower/cca_command_tower.papa"
+        }
+    ],
+    "death_weapon": {
+        "ground_ammo_spec": "/pa/tools/unit_aoe_death_weapons/building_small_tool_unit_death_weapon.json"
+    },
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/radar"
+        },
+        "enabled": {
+            "audio_cue": "/SE/Buildings/radar_enabled"
+        },
+        "disabled": {
+            "audio_cue": "/SE/Buildings/radar_disabled"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/radar",
+            "effect_scale": 1.2
+        }
+    },
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/radar"
+        }
+    },
+    "selection_icon": {
+        "diameter": 34.0
+    },
+    "mesh_bounds": [
+        23.6,
+        11.7,
+        16.1
+    ],
+    "placement_size": [
+        28.5,
+        17.0
+    ],
+    "TEMP_texelinfo": 21.2923
+}

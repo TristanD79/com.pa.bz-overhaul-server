@@ -1,0 +1,74 @@
+{
+    "blend_root": {
+        "type": "unit_state",
+        "nodes": {
+            "being_built": {
+                "type": "playback",
+                "anim_name": "undeployed",
+                "looping": true
+            },
+            "living": {
+                "type": "sequence",
+                "entries": [
+                    {
+                        "type": "sequence_entry",
+                        "name": "deploy_seq",
+                        "node": {
+                            "type": "playback",
+                            "anim_name": "deploy",
+                            "looping": false
+                        },
+                        "transitions": [
+                            {
+                                "transition_forward": {
+                                    "func": "anim_complete",
+                                    "target": "deployed_loop_seq"
+                                },
+                                "transition_reverse": {
+                                    "func": "anim_complete",
+                                    "target": "deployed_loop_seq"
+                                }
+                            }
+                        ],
+                        "reset": "playback_reset"
+                    },
+                    {
+                        "type": "sequence_entry",
+                        "name": "deployed_loop_seq",
+                        "node": {
+                            "type": "playback",
+                            "anim_name": "deployed",
+                            "looping": true
+                        },
+                        "transitions": [
+                            {
+                                "transition_forward": {
+                                    "func": "false_func",
+                                    "target": "deploy_seq"
+                                },
+                                "transition_reverse": {
+                                    "func": "false_func",
+                                    "target": "deploy_seq"
+                                }
+                            }
+                        ],
+                        "reset": "playback_reset"
+                    }
+                ],
+                "transition_seek": {
+                    "func": "true_func",
+                    "true_target": "deployed_loop_seq",
+                    "false_target": "deployed_loop_seq"
+                }
+            },
+            "dead": {
+                "type": "bind_pose"
+            },
+            "ghost": {
+                "type": "item",
+                "anim_name": "deployed",
+                "looping": true
+            }
+        }
+    }
+}

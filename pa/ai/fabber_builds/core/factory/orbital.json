@@ -1,0 +1,225 @@
+{
+  "build_list": [
+    {
+      "name": "Core Orbital Launcher",
+      "to_build": "CoreT1OrbitalFactory",
+      "instance_count": 1,
+      "shared_instance_count": "OrbitalLauncher",
+      "priority": 0,
+      "max_num_assisters": 3,
+      "builders": [
+        "CoreT0Commander",
+        "CoreT1FabberNoNaval",
+        "CoreT2FabberNoNaval"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "CoreT1OrbitalFactory"
+          },
+          {
+            "test_type": "WantCommanderOffPlanet",
+            "boolean": false
+          },
+          {
+            "test_type": "NeedOrbitalLauncher"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Advanced) - Orbital - Nuke - NukeDefense - SelfDestruct",
+            "compare0": ">=",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "CoreT1OrbitalFactory"
+          }
+        ],
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "CoreT1OrbitalFactory"
+          },
+          {
+            "test_type": "PlanetWithoutPresence",
+            "boolean": true
+          },
+          {
+            "test_type": "NeedOrbitalLauncher"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Factory - Orbital - Nuke - NukeDefense",
+            "compare0": ">=",
+            "value0": 2
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "CoreT1OrbitalFactory"
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 5
+      }
+    },
+    {
+      "name": "Core Orbital Launcher - Rush",
+      "to_build": "CoreT1OrbitalFactory",
+      "instance_count": 1,
+      "shared_instance_count": "OrbitalLauncher",
+      "min_num_assisters": 3,
+      "max_num_assisters": 5,
+      "priority": 0,
+      "builders": ["CoreT1FabberNoNaval", "CoreT2FabberNoNaval"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "WantCommanderOffPlanet",
+            "boolean": true
+          },
+          {
+            "test_type": "NeedOrbitalLauncher"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Factory - Orbital - Nuke - NukeDefense",
+            "compare0": ">=",
+            "value0": 2
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Fabber - (Naval & Orbital)",
+            "compare0": ">=",
+            "value0": 3
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Orbital & Factory & Land",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "CoreT1OrbitalFactory"
+          }
+        ],
+        [
+          {
+            "test_type": "UnableToExpand",
+            "boolean": true
+          },
+          {
+            "test_type": "PlanetWithoutPresence",
+            "boolean": true
+          },
+          {
+            "test_type": "NeedOrbitalLauncher"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Factory - Orbital - Nuke - NukeDefense",
+            "compare0": ">=",
+            "value0": 2
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Fabber",
+            "compare0": ">=",
+            "value0": 2
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Orbital & Factory & Land",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "CoreT1OrbitalFactory"
+          }
+        ],
+        [
+          {
+            "test_type": "AloneOnPlanet",
+            "boolean": true
+          },
+          {
+            "test_type": "PlanetWithoutPresence",
+            "boolean": true
+          },
+          {
+            "test_type": "NeedOrbitalLauncher"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Factory - Orbital - Nuke - NukeDefense",
+            "compare0": ">=",
+            "value0": 2
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Fabber",
+            "compare0": ">=",
+            "value0": 2
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Orbital & Factory & Land",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "CoreT1OrbitalFactory"
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 5
+      }
+    },
+    {
+      "name": "Core Orbital Factory",
+      "to_build": "CoreT2OrbitalFactory",
+      "instance_count": 1,
+      "priority": 0,
+      "max_num_assisters": 3,
+      "builders": ["OrbitalFabber"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "CoreT2OrbitalFactory"
+          },
+          {
+            "test_type": "NeedOrbitalFactory"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Orbital & Factory - Land",
+            "compare0": "<=",
+            "value0": 3
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "CoreT2OrbitalFactory"
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 5
+      }
+    }
+  ]
+}

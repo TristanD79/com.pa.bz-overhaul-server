@@ -1,0 +1,144 @@
+{
+    "base_spec": "/pa/units/land/base_bot/base_bot.json",
+    "unit_name": "CCA Walker",
+    "display_name": "!LOC:Golem",
+    "description": "!LOC:Walker - Equipped with a duel Blast cannons and a standard Mortar. Attacks land and air targets.",
+    "si_name": "bz_walker",
+    "max_health": 6000,
+    "build_metal_cost": 12,
+    "armor_type": "AT_Bot",
+    "attachable": {
+        "offsets": {
+            "root": [
+                0,
+                0,
+                0
+            ],
+            "head": [
+                0,
+                0,
+                10.2
+            ]
+        }
+    },
+    "unit_types": [
+        "UNITTYPE_Custom31",
+        "UNITTYPE_FactoryBuild",
+        "UNITTYPE_Mobile",
+        "UNITTYPE_Advanced",
+        "UNITTYPE_Land",
+        "UNITTYPE_Bot",
+        "UNITTYPE_Offense"
+    ],
+    "command_caps": [
+        "ORDER_Move",
+        "ORDER_Patrol",
+        "ORDER_Attack",
+        "ORDER_Assist",
+        "ORDER_Use",
+        "ORDER_FireSecondaryWeapon"
+    ],
+    "transportable": {
+        "size": 1
+    },
+    "guard_layer": "WL_AnySurface",
+    "navigation": {
+        "type": "land-small",
+        "acceleration": 50.0,
+        "brake": 80.0,
+        "move_speed": 5.0,
+        "turn_speed": 90.0
+    },
+    "physics": {
+        "radius": 10.0
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 90.0
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/land/cca_walker/cca_walker.papa",
+        "animations": {
+            "death01": "/pa/units/land/cca_walker/cca_walker_anim_death01.papa",
+            "walk": "/pa/units/land/cca_walker/cca_walker_anim_run.papa",
+            "idle": "/pa/units/land/cca_walker/cca_walker_anim_idle.papa",
+            "aim_up": "/pa/units/land/cca_walker/cca_walker_anim_aimUp.papa",
+            "aim_down": "/pa/units/land/cca_walker/cca_walker_anim_aimDown.papa"
+        },
+        "animtree": "/pa/anim/anim_trees/cca_walker_anim_tree.json",
+        "walk_speed": 12
+    },
+    "tools": [
+        {
+            "spec_id": "/pa/units/land/cca_walker/cca_walker_tool_weapon_Blast_Cannon.json",
+            "fire_event": "fired0",
+            "aim_bone": "bone_body",
+            "projectiles_per_fire": 2,
+            "muzzle_bone": [
+               "socket_muzzle01",
+               "socket_muzzle02"
+            ],
+            "primary_weapon": true
+        },
+        {
+            "spec_id": "/pa/tools/weapon_Standard_Mortar/weapon_Standard_Mortar.json",
+            "fire_event": "fired1",
+            "aim_bone": "bone_body",
+            "muzzle_bone": "bone_body",
+            "secondary_weapon": true
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/bot"
+        },
+        "fired0": {
+            "audio_cue": "/SE/Weapons/structure/laser_defense_single_fire",
+            "effect_spec": ""
+        },
+        "fired1": {
+            "audio_cue": "/SE/Weapons/veh/tank_light_fire",
+            "effect_spec": ""
+        },
+        "died": {
+            "audio_cue": "/SE/Death/Bot",
+            "effect_spec": "/pa/effects/specs/default_explosion_bot_t2.pfx",
+            "effect_scale": 1.0
+        }
+    },
+    "audio": {
+        "loops": {
+            "move": {
+                "cue": "/SE/Movement/bot/T2_assault_loop",
+                "flag": "vel_changed",
+                "should_start_func": "is_moving",
+                "should_stop_func": "is_not_moving"
+            }
+        },
+        "selection_response": {
+            "cue": "/SE/Selection/bot/T2_assault"
+        }
+    },
+    "selection_icon": {
+        "diameter": 19.0
+     },
+     "mesh_bounds": [
+        12.2,
+        12.2,
+        10.2
+     ],
+     "wreckage_mesh_bounds": [
+        12.2,
+        12.2,
+        10.2
+     ],
+     "TEMP_texelinfo": 17.1454
+}

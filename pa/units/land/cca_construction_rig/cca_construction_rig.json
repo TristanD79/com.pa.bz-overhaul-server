@@ -1,0 +1,218 @@
+{
+   "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
+   "unit_name": "CCA Construction Rig",
+   "display_name": "!LOC:Construction Rig",
+   "description": "!LOC:Constructor Hover Tank - Fabricates and reclaims structures.",
+   "si_name": "bz_construction_rig",
+   "max_health": 2000,
+   "build_metal_cost": 8,
+   "armor_type": "AT_Hover",
+   "attachable": {
+      "offsets": {
+         "root": [
+            0,
+            0,
+            0
+         ],
+         "head": [
+            0,
+            0,
+            3.82
+         ]
+      }
+   },
+   "buildable_types": "(Custom31 & Structure) - CombatFabBuild",
+   "unit_types": [
+      "UNITTYPE_Custom31",
+      "UNITTYPE_CmdBuild",
+      "UNITTYPE_FactoryBuild",
+      "UNITTYPE_Mobile",
+      "UNITTYPE_Basic",
+      "UNITTYPE_Land",
+      "UNITTYPE_Hover",
+      "UNITTYPE_Construction",
+      "UNITTYPE_Fabber"
+   ],
+   "command_caps": [
+      "ORDER_Move",
+      "ORDER_Patrol",
+      "ORDER_Build",
+      "ORDER_Reclaim",
+      "ORDER_Repair",
+      "ORDER_Assist",
+      "ORDER_Use"
+   ],
+   "transportable": {
+      "size": 1
+   },
+   "guard_layer": "WL_AnySurface",
+   "navigation": {
+      "type": "hover",
+      "acceleration": 30,
+      "brake": 48,
+      "move_speed": 8.0,
+      "turn_speed": 90.0,
+      "bank_factor": 0.3,
+      "turn_in_place": true,
+      "group_preference": "back"
+   },
+   "physics": {
+      "radius": 6.3,
+      "air_friction": 0.5
+   },
+   "recon": {
+      "observer": {
+         "items": [
+            {
+               "layer": "surface_and_air",
+               "channel": "sight",
+               "shape": "capsule",
+               "radius": 65.0
+            }
+         ]
+      }
+   },
+   "model": {
+      "filename": "/pa/units/land/cca_construction_rig/cca_construction_rig.papa",
+      "animations": {
+         "build_start": "/pa/units/land/cca_construction_rig/cca_construction_rig_anim_build_start.papa",
+         "build_loop": "/pa/units/land/cca_construction_rig/cca_construction_rig_anim_build_loop.papa",
+         "build_end": "/pa/units/land/cca_construction_rig/cca_construction_rig_anim_build_end.papa"
+      },
+      "animtree": "/pa/anim/anim_trees/constructor_turret_anim_tree.json",
+      "arrows": 5
+   },
+   "tools": [
+      {
+         "spec_id": "/pa/tools/construction_rig_build_arm/construction_rig_build_arm.json",
+         "aim_bone": "bone_root"
+      }
+   ],
+   "events": {
+      "build_complete": {
+         "audio_cue": "/SE/Build_Complete/veh"
+      },
+      "died": {
+         "audio_cue": "/SE/Death/Veh"
+      }
+   },
+   "audio": {
+      "loops": {
+         "move": {
+            "cue": "/SE/Movement/veh/tank_hover_loop",
+            "flag": "vel_changed",
+            "should_start_func": "is_moving",
+            "should_stop_func": "is_not_moving"
+         }
+      },
+      "selection_response": {
+         "cue": "/SE/Selection/veh/tank_hover"
+      }
+   },
+   "fx_offsets": [
+      {
+         "type": "build",
+         "filename": "/pa/effects/specs/recycler_spray.pfx",
+         "bone": "socket_muzzle01",
+         "offset": [
+            0,
+            0,
+            0
+         ],
+         "orientation": [
+            0,
+            0,
+            0
+         ]
+      },
+      {
+         "type": "build",
+         "filename": "/pa/effects/specs/recycler_spray.pfx",
+         "bone": "socket_muzzle02",
+         "offset": [
+            0,
+            0,
+            0
+         ],
+         "orientation": [
+            0,
+            0,
+            0
+         ]
+      },
+      {
+         "type": "build",
+         "filename": "/pa/effects/specs/con_rig_exhaust.pfx",
+         "bone": "socket_exhaust01",
+         "offset": [
+            0,
+            0,
+            0
+         ],
+         "orientation": [
+            0,
+            0,
+            0
+         ]
+      },
+      {
+         "type": "build",
+         "filename": "/pa/effects/specs/con_rig_exhaust.pfx",
+         "bone": "socket_exhaust02",
+         "offset": [
+            0,
+            0,
+            0
+         ],
+         "orientation": [
+            0,
+            0,
+            0
+         ]
+      },
+      {
+         "type": "build",
+         "filename": "/pa/effects/specs/con_rig_exhaust.pfx",
+         "bone": "socket_exhaust03",
+         "offset": [
+            0,
+            0,
+            0
+         ],
+         "orientation": [
+            0,
+            0,
+            0
+         ]
+      },
+      {
+         "type": "build",
+         "filename": "/pa/effects/specs/con_rig_exhaust.pfx",
+         "bone": "socket_exhaust04",
+         "offset": [
+            0,
+            0,
+            0
+         ],
+         "orientation": [
+            0,
+            0,
+            0
+         ]
+      }
+   ],
+   "selection_icon": {
+      "diameter": 16.0
+   },
+   "mesh_bounds": [
+      3.2,
+      13.1,
+      3.82
+   ],
+   "wreckage_mesh_bounds": [
+      3.2,
+      13.1,
+      3.82
+   ],
+   "TEMP_texelinfo": 27.1164
+}

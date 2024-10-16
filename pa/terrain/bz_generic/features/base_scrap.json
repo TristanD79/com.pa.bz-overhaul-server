@@ -1,0 +1,9 @@
+{
+    "base_spec": "/pa/terrain/generic/base_feature.json",
+    "display_name": "!LOC:Scrap",
+    "max_health": 1000,
+    "metal_value": 1,
+    "metal_rate": 0,
+    "reclaimable": true,
+    "damageable": true
+}

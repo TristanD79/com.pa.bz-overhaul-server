@@ -1,0 +1,7 @@
+{
+    "base_spec": "/pa/terrain/bz_generic/features/base_scrap.json",
+    "model": {
+        "filename": "/pa/terrain/bz_generic/fbx/scrap_03.papa"
+    },
+    "metal_value": 1
+}

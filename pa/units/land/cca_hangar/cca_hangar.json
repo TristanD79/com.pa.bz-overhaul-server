@@ -1,0 +1,164 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "CCA Hangar",
+    "display_name": "!LOC:Hangar",
+    "description": "!LOC:Hangar - Repairs units.",
+    "si_name": "bz_hangar",
+    "max_health": 4000,
+    "build_metal_cost": 7,
+    "atrophy_rate": 45.0,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_LandHorizontal",
+    "area_build_type": "Line",
+    "area_build_separation": 2.0,
+    "unit_types": [
+        "UNITTYPE_Custom31",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_Basic",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Land",
+        "UNITTYPE_Fabber"
+    ],
+    "command_caps": [
+        "ORDER_Patrol",
+        "ORDER_Repair",
+        "ORDER_Assist"
+    ],
+    "navigation": {
+        "type": "hover",
+        "acceleration": 0,
+        "brake": 0,
+        "move_speed": 0,
+        "turn_speed": 0
+    },
+    "physics": {
+        "type": "Structure",
+        "collision_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+        "shape": "Box",
+        "air_friction": 1.0,
+        "radius": 5.0,
+        "allow_pushing": false,
+        "push_sideways": false,
+        "allow_underground": false
+    },
+    "guard_layer": "WL_LandHorizontal",
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 50
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "filename": "/pa/units/land/cca_hangar/cca_hangar.papa",
+            "animations": {},
+            "animtree": "/pa/anim/anim_trees/hangar_anim_tree.json"
+        }
+    ],
+    "tools": [
+        {
+            "spec_id": "/pa/tools/hangar_build_arm/hangar_build_arm.json",
+            "aim_bone": "bone_root"
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/structure_small"
+        },
+        "build": {
+            "cue": "/SE/Construction/Fab_contruction_beam_loop",
+            "flag": "build_target_changed",
+            "should_start_func": "has_build_target",
+            "should_stop_func": "no_build_target"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/Factory",
+            "effect_spec": "/pa/effects/specs/default_building_explosion_large.pfx",
+            "effect_scale": 1.0
+        }
+    },
+    "audio": {
+        "loops": {
+            "build": {
+                "cue": "/SE/Construction/Fab_contruction_beam_loop",
+                "flag": "build_target_changed",
+                "should_start_func": "has_build_target",
+                "should_stop_func": "no_build_target"
+            }
+        },
+        "selection_response": {
+            "cue": "/SE/Selection/structure/air"
+        }
+    },
+    "fx_offsets": [
+        {
+            "type": "build",
+            "filename": "/pa/effects/specs/fab_spray.pfx",
+            "bone": "bone_platform",
+            "offset": [
+                0,
+                0,
+                0
+            ],
+            "orientation": [
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "selection_icon": {
+        "diameter": 68.0
+    },
+    "mesh_bounds": [
+        49.8,
+        49.8,
+        7.92
+    ],
+    "placement_size": [
+        55,
+        55
+    ],
+    "TEMP_texelinfo": 44.6712,
+    "structure": {
+        "cost_stamp": {
+            "shape": "box",
+            "type_data": [
+                {
+                    "move_type": "land-small",
+                    "stamp_type": "structure"
+                },
+                {
+                    "move_type": "amphibious",
+                    "stamp_type": "structure"
+                },
+                {
+                    "move_type": "amphibious-large",
+                    "stamp_type": "structure"
+                },
+                {
+                    "move_type": "water-hover",
+                    "stamp_type": "structure"
+                },
+                {
+                    "move_type": "hover-large",
+                    "stamp_type": "structure"
+                },
+                {
+                    "move_type": "deepwater",
+                    "stamp_type": "structure"
+                },
+                {
+                    "move_type": "underwater",
+                    "stamp_type": "structure"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "platoon_templates": {
+    "TAO_Nukes": {
+      "units": [
+        {
+          "unit_types": "Structure & Nuke",
+          "min_count": 1,
+          "max_count": -1
+        }
+      ]
+    },
+    "TAO_Artillery": {
+      "units": [
+        {
+          "unit_types": "(Structure & (Artillery | Tactical)) - Factory",
+          "max_count": 1
+        }
+      ]
+    }
+  }
+}

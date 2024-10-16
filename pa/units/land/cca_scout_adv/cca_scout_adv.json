@@ -1,0 +1,201 @@
+{
+   "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
+   "unit_name": "CCA Scout Adv",
+   "display_name": "!LOC:Flanker Adv",
+   "description": "!LOC:Scout Hover Tank - Rapid. Equipped with duel standard Chainguns, and a Shadower rocket launcher. Attacks land and air targets.",
+   "si_name": "bz_scout_adv",
+   "max_health": 1900,
+   "build_metal_cost": 9,
+   "armor_type": "AT_Hover",
+   "attachable": {
+      "offsets": {
+         "root": [
+            0,
+            0,
+            0
+         ],
+         "head": [
+            0,
+            0,
+            2.08
+         ]
+      }
+   },
+   "unit_types": [
+      "UNITTYPE_Custom31",
+      "UNITTYPE_CmdBuild",
+      "UNITTYPE_FactoryBuild",
+      "UNITTYPE_Mobile",
+      "UNITTYPE_Basic",
+      "UNITTYPE_Land",
+      "UNITTYPE_Hover",
+      "UNITTYPE_Offense",
+      "UNITTYPE_Scout"
+   ],
+   "command_caps": [
+      "ORDER_Move",
+      "ORDER_Patrol",
+      "ORDER_Attack",
+      "ORDER_Assist",
+      "ORDER_Use",
+      "ORDER_FireSecondaryWeapon"
+   ],
+   "transportable": {
+      "size": 1
+   },
+   "guard_layer": "WL_AnySurface",
+   "navigation": {
+      "type": "hover",
+      "acceleration": 35,
+      "brake": 48,
+      "move_speed": 23.0,
+      "turn_speed": 140.0,
+      "bank_factor": 0.3,
+      "group_preference": "front"
+   },
+   "physics": {
+      "radius": 6.3,
+      "air_friction": 0.5
+   },
+   "recon": {
+      "observer": {
+         "items": [
+            {
+               "layer": "surface_and_air",
+               "channel": "sight",
+               "shape": "capsule",
+               "radius": 90.0
+            }
+         ]
+      }
+   },
+   "model": {
+      "filename": "/pa/units/land/cca_scout/cca_scout.papa",
+      "animtree": "/pa/units/land/cca_scout/cca_scout_anim_tree.json",
+      "arrows": 5
+   },
+   "tools": [
+      {
+         "spec_id": "/pa/units/land/cca_scout/cca_scout_weapon_Chaingun.json",
+         "fire_event": "fired0",
+         "aim_bone": "bone_pitch",
+         "projectiles_per_fire": 2,
+         "muzzle_bone": [
+            "socket_muzzle01",
+            "socket_muzzle02"
+         ],
+         "primary_weapon": true
+      },
+      {
+         "spec_id": "/pa/tools/weapon_Shadower/weapon_Shadower.json",
+         "fire_event": "fired1",
+         "aim_bone": "bone_pitch",
+         "projectiles_per_fire": 1,
+         "muzzle_bone": [
+            "socket_muzzle01",
+            "socket_muzzle02"
+         ]
+      }
+   ],
+   "events": {
+      "build_complete": {
+         "audio_cue": "/SE/Build_Complete/veh"
+      },
+      "fired0": {
+         "audio_cue": "/SE/Weapons/veh/tank_light_fire",
+         "effect_spec": ""
+      },
+      "fired1": {
+         "audio_cue": "/SE/Weapons/bot/bot_aa_fire",
+         "effect_spec": ""
+      },
+      "died": {
+         "audio_cue": "/SE/Death/Veh"
+      }
+   },
+   "audio": {
+      "loops": {
+         "move": {
+            "cue": "/SE/Movement/veh/tank_hover_loop",
+            "flag": "vel_changed",
+            "should_start_func": "is_moving",
+            "should_stop_func": "is_not_moving"
+         }
+      },
+      "selection_response": {
+         "cue": "/SE/Selection/veh/tank_hover"
+      }
+   },
+   "fx_offsets": [
+      {
+         "type": "moving",
+         "filename": "/pa/effects/specs/red_thruster_jets.pfx",
+         "bone": "bone_rightThruster",
+         "offset": [
+            0.0,
+            0.0,
+            0.0
+         ],
+         "orientation": [
+            0.0,
+            180.0,
+            0.0
+         ]
+      },
+      {
+         "type": "moving",
+         "filename": "/pa/effects/specs/red_thruster_jets.pfx",
+         "bone": "bone_leftThruster",
+         "offset": [
+            0.0,
+            0.0,
+            0.0
+         ],
+         "orientation": [
+            0.0,
+            180.0,
+            0.0
+         ]
+      }
+   ],
+   "headlights": [
+      {
+         "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+         "offset": [
+            0.0,
+            0.0,
+            0.0
+         ],
+         "orientation": [
+            0.0,
+            70.0,
+            0.0
+         ],
+         "near_width": 2.0,
+         "near_height": 2.0,
+         "near_distance": 2.0,
+         "far_distance": 25.0,
+         "color": [
+            0.9,
+            0.92,
+            1.0
+         ],
+         "intensity": 2.0,
+         "bone": "bone_headlight"
+      }
+   ],
+   "selection_icon": {
+      "diameter": 14.0
+   },
+   "mesh_bounds": [
+      8.85,
+      6.02,
+      2.41
+   ],
+   "wreckage_mesh_bounds": [
+      8.85,
+      6.02,
+      2.41
+   ],
+   "TEMP_texelinfo": 25.7958
+}

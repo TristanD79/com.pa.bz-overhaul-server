@@ -1,0 +1,41 @@
+{
+  "build_list": [
+    {
+      "name": "Core Fabber Assist",
+      "instance_count": -1,
+      "priority": 1,
+      "builders": [
+        "CoreT0Commander",
+        "CoreT1Fabber",
+        "CoreT2Fabber",
+        "CoreT2KbotCommander",
+        "OrbitalFabber"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ],
+        [
+          {
+            "test_type": "CurrentMetalEfficiency",
+            "compare0": ">",
+            "value0": 1
+          },
+          {
+            "test_type": "MetalStorageFrac",
+            "compare0": ">",
+            "value0": 0.2
+          },
+          {
+            "test_type": "CurrentEnergyEfficiency",
+            "compare0": ">=",
+            "value0": 1
+          }
+        ]
+      ],
+      "task_type": "BuilderAssist"
+    }
+  ]
+}
