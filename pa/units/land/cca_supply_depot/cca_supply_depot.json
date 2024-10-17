@@ -2,7 +2,7 @@
     "base_spec": "/pa/units/land/base_structure/base_structure.json",
     "unit_name": "CCA Supply Depot",
     "display_name": "!LOC:Supply Depot",
-    "description": "!LOC:Supply Depot - Replenishses ammo.",
+    "description": "!LOC:Supply Depot - Stores energy.",
     "si_name": "bz_supply_depot",
     "max_health": 2000,
     "build_metal_cost": 5,
@@ -11,6 +11,9 @@
     "wreckage_health_frac": 0.0,
     "spawn_layers": "WL_LandHorizontal",
     "area_build_separation": 4.0,
+    "storage": {
+        "energy": 1000
+    },
     "unit_types": [
         "UNITTYPE_Custom31",
         "UNITTYPE_FabBuild",
