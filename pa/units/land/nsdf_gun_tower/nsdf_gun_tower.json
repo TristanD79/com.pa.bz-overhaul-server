@@ -13,8 +13,9 @@
     "atrophy_cool_down": 15.0,
     "spawn_layers": "WL_LandHorizontal",
     "area_build_type": "Line",
-    "alt_area_build_type": "Line",
-    "alt_area_build_separation": 12,
+    "area_build_separation": 35,
+    "alt_area_build_type": "Sphere",
+    "alt_area_build_separation": 20,
     "unit_types": [
         "UNITTYPE_Custom30",
         "UNITTYPE_FabBuild",
