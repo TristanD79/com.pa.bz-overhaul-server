@@ -6,9 +6,13 @@
     "si_name": "bz_mobile_unit_factory",
     "max_health": 8000,
     "build_metal_cost": 12,
+    "atrophy_rate": 2.5,
+    "atrophy_cool_down": 15,
+    "area_build_type": "Sphere",
+    "spawn_layers": "WL_LandHorizontal",
     "production": {
         "energy": 5,
-        "metal": 0.1
+        "metal": 0.5
     },
     "storage": {
         "energy": 500,
@@ -162,7 +166,7 @@
                 0,
                 0
             ]
-        },        
+        },
         {
             "type": "build",
             "filename": "/pa/effects/specs/construction_glow.pfx",
