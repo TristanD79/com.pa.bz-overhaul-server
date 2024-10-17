@@ -9,7 +9,7 @@
     "max_velocity": 130.0,
     "lifetime": 3.0,
     "model": {
-        "filename": ""
+        "filename": "/pa/units/air/stabber/stabber.papa"
     },
     "fx_trail": {
         "filename": "/pa/effects/specs/cannon_SP_Stabber_proj_trail.pfx",
