@@ -17,7 +17,30 @@
         "UNITTYPE_Artillery",
         "UNITTYPE_Defense"
     ],
+    "buildable_types": "UNITTYPE_Custom30 & CannonBuildable",
+    "factory_cooldown_time": 3.0,
+    "wait_to_rolloff_time": 3.0,
+    "factory": {
+        "deploy_projectile": "/pa/units/land/unit_cannon/unit_cannon_deploy.json",
+        "store_units": true,
+        "pass_on_orders": false,
+        "spawn_points": [
+            "bone_root",
+            "bone_root",
+            "bone_root",
+            "bone_root",
+            "bone_root",
+            "bone_root",
+            "bone_root",
+            "bone_root",
+            "bone_root",
+            "bone_root"
+        ],
+        "hide_deploy_projectile": true,
+        "hide_stored_units": true
+    },
     "command_caps": [
+        "ORDER_FactoryBuild",
         "ORDER_Attack"
     ],
     "guard_layer": "WL_AnySurface",
@@ -37,15 +60,27 @@
         {
             "layer": "WL_LandHorizontal",
             "filename": "/pa/units/land/nsdf_barracks/nsdf_barracks.papa",
-            "animtree": "/pa/anim/anim_trees/barracks_anim_tree.json"
+            "animations": {
+                "aim_up": "/pa/units/land/unit_cannon/unit_cannon_anim_aimUp.papa",
+                "start": "/pa/units/land/unit_cannon/unit_cannon_anim_start.papa",
+                "build": "/pa/units/land/unit_cannon/unit_cannon_anim_build.papa",
+                "end": "/pa/units/land/unit_cannon/unit_cannon_anim_end.papa"
+            },
+            "animtree": "/pa/anim/anim_trees/unit_cannon_anim_tree.json"
         }
     ],
     "nearby_target_tick_update_interval": 15,
     "tools": [
         {
             "spec_id": "/pa/units/land/nsdf_barracks/nsdf_barracks_tool_weapon.json",
-            "aim_bone": "bone_root",
-            "muzzle_bone": "bone_root"
+            "record_index": 0,
+            "aim_bone": "bone_deploy",
+            "muzzle_bone": "bone_deploy"
+        },
+        {
+            "spec_id": "/pa/units/land/unit_cannon/unit_cannon_build_arm.json",
+            "record_index": 1,
+            "aim_bone": "bone_root"
         }
     ],
     "events": {
@@ -53,8 +88,8 @@
             "audio_cue": "/SE/Build_Complete/structure_small"
         },
         "fired": {
-            "audio_cue": "/SE/Weapons/structure/artillery_short_fire",
-            "effect_spec": "/pa/units/land/nsdf_barracks/nsdf_barracks_fire.pfx socket_muzzle"
+            "audio_cue": "/SE/Weapons/structure/unit_cannon_fire",
+            "effect_spec": ""
         },
         "died": {
             "audio_cue": "/SE/Death/structure_small",
@@ -63,7 +98,7 @@
     },
     "audio": {
         "selection_response": {
-            "cue": "/SE/Selection/structure/artillery"
+            "cue": "/SE/Selection/structure/unit_cannon"
         }
     },
     "selection_icon": {

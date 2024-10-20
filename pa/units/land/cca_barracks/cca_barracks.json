@@ -44,8 +44,8 @@
     "tools": [
         {
             "spec_id": "/pa/units/land/cca_barracks/cca_barracks_tool_weapon.json",
-            "aim_bone": "bone_root",
-            "muzzle_bone": "bone_root"
+            "aim_bone": "bone_deploy",
+            "muzzle_bone": "bone_deploy"
         }
     ],
     "events": {
