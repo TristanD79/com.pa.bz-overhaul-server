@@ -58,7 +58,7 @@
             "audio_cue": "/SE/Build_Complete/structure_small"
         },
         "fired": {
-            "audio_cue": "/SE/Weapons/structure/laser_defense_single_fire"
+            "audio_cue": "/SE/Weapons/veh/tank_light_fire"
         },
         "died": {
             "audio_cue": "/SE/Death/structure_small",
