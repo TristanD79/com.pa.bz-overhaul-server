@@ -7,6 +7,7 @@
     "max_health": 6000,
     "build_metal_cost": 12,
     "armor_type": "AT_Bot",
+    "has_death_effects": true,
     "attachable": {
         "offsets": {
             "root": [
@@ -67,8 +68,8 @@
     "model": {
         "filename": "/pa/units/land/cca_walker/cca_walker.papa",
         "animations": {
-            "death01": "/pa/units/land/cca_walker/cca_walker_anim_death01.papa",
-            "walk": "/pa/units/land/cca_walker/cca_walker_anim_run.papa",
+            "death": "/pa/units/land/cca_walker/cca_walker_anim_death.papa",
+            "walk": "/pa/units/land/cca_walker/cca_walker_anim_walk.papa",
             "idle": "/pa/units/land/cca_walker/cca_walker_anim_idle.papa",
             "aim_up": "/pa/units/land/cca_walker/cca_walker_anim_aimUp.papa",
             "aim_down": "/pa/units/land/cca_walker/cca_walker_anim_aimDown.papa"
@@ -80,7 +81,7 @@
         {
             "spec_id": "/pa/units/land/cca_walker/cca_walker_tool_weapon_Blast_Cannon.json",
             "fire_event": "fired0",
-            "aim_bone": "bone_body",
+            "aim_bone": "bone_root",
             "projectiles_per_fire": 2,
             "muzzle_bone": [
                "socket_muzzle01",
@@ -91,8 +92,8 @@
         {
             "spec_id": "/pa/tools/weapon_Standard_Mortar/weapon_Standard_Mortar.json",
             "fire_event": "fired1",
-            "aim_bone": "bone_body",
-            "muzzle_bone": "bone_body",
+            "aim_bone": "bone_root",
+            "muzzle_bone": "bone_head",
             "secondary_weapon": true
         }
     ],
@@ -117,7 +118,7 @@
     "audio": {
         "loops": {
             "move": {
-                "cue": "/SE/Movement/bot/T2_assault_loop",
+                "cue": "/SE/Movement/bot/ZZZT2_artillery_loop",
                 "flag": "vel_changed",
                 "should_start_func": "is_moving",
                 "should_stop_func": "is_not_moving"

@@ -7,7 +7,7 @@
             },
             "living": {
                 "type": "aim_blend",
-                "aim_bone_root": "bone_body",
+                "aim_bone_root": "bone_head",
                 "node_aim_down": {
                     "type": "playback",
                     "anim_name": "aim_down"
@@ -34,7 +34,7 @@
             "dead": {
                 "type": "playback",
                 "looping": false,
-                "anim_name": "death01"
+                "anim_name": "death"
             },
             "ghost": {
                 "type": "bind_pose"
