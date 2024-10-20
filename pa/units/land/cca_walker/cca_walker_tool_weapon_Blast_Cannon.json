@@ -5,7 +5,7 @@
     "max_range": 200,
     "yaw_rate": 90,
     "pitch_rate": 90,
-    "yaw_range": 45,
+    "yaw_range": 55,
     "pitch_range": 90,
     "auto_attack": true,
     "spread_fire": false,
