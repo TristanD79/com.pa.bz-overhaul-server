@@ -81,7 +81,7 @@
         {
             "spec_id": "/pa/units/land/cca_walker/cca_walker_tool_weapon_Blast_Cannon.json",
             "fire_event": "fired0",
-            "aim_bone": "bone_root",
+            "aim_bone": "bone_head",
             "projectiles_per_fire": 2,
             "muzzle_bone": [
                "socket_muzzle01",
@@ -92,7 +92,7 @@
         {
             "spec_id": "/pa/tools/weapon_Standard_Mortar/weapon_Standard_Mortar.json",
             "fire_event": "fired1",
-            "aim_bone": "bone_root",
+            "aim_bone": "bone_head",
             "muzzle_bone": "bone_head",
             "secondary_weapon": true
         }
