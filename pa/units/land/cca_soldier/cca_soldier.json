@@ -1,0 +1,135 @@
+{
+    "base_spec": "/pa/units/land/base_bot/base_bot.json",
+    "unit_name": "CCA Solider",
+    "display_name": "!LOC:Soldier",
+    "description": "!LOC:Basic Infantryman - Slow and equipped with a Chaingun. Attacks surface targets when on land.",
+    "max_health": 250,
+    "build_metal_cost": 1,
+    "wreckage_health_frac": 0.0,
+    "attachable": {
+        "offsets": {
+            "root": [
+                0,
+                0,
+                0
+            ],
+            "head": [
+                0,
+                0,
+                2.17
+            ]
+        }
+    },
+    "unit_types": [
+        "UNITTYPE_Custom31",
+        "UNITTYPE_FactoryBuild",
+        "UNITTYPE_CannonBuildable",
+        "UNITTYPE_Mobile",
+        "UNITTYPE_Basic",
+        "UNITTYPE_Land",
+        "UNITTYPE_Bot",
+        "UNITTYPE_Offense",
+        "UNITTYPE_Scout"
+    ],
+    "transportable": {
+        "size": 1
+    },
+    "guard_layer": "WL_AnySurface",
+    "navigation": {
+        "type": "land-small",
+        "acceleration": 3.0,
+        "brake": -1,
+        "move_speed": 5.0,
+        "turn_speed": 60.0
+    },
+    "physics": {
+        "radius": 2.0
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 80
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/land/cca_soldier/cca_soldier.papa",
+        "animations": {
+            "walk": "/pa/units/land/cca_soldier/cca_soldier_anim_run.papa",
+            "idle": "/pa/units/land/cca_soldier/cca_soldier_anim_idle.papa",
+            "aim_up": "/pa/units/land/cca_soldier/cca_soldier_anim_aim_up.papa",
+            "aim_down": "/pa/units/land/cca_soldier/cca_soldier_anim_aim_down.papa"
+        },
+        "animtree": "/pa/anim/anim_trees/cca_soldier_anim_tree.json",
+        "walk_speed": 20
+    },
+    "tools": [
+        {
+            "spec_id": "/pa/units/land/cca_soldier/cca_soldier_weapon_Chaingun.json",
+            "aim_bone": "bone_rightForearm",
+            "muzzle_bone": "socket_muzzle"
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/bot"
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/bot/assault_fire",
+            "effect_spec": ""
+        }
+    },
+    "audio": {
+        "loops": {
+            "move": {
+                "cue": "/SE/Movement/bot/assault_loop",
+                "flag": "vel_changed",
+                "should_start_func": "is_moving",
+                "should_stop_func": "is_not_moving"
+            }
+        },
+        "selection_response": {
+            "cue": "/SE/Selection/bot/assault"
+        }
+    },
+    "headlights": [
+        {
+           "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+           "offset": [
+              0.0,
+              0.0,
+              0.0
+           ],
+           "orientation": [
+              0.0,
+              70.0,
+              0.0
+           ],
+           "near_width": 2.0,
+           "near_height": 2.0,
+           "near_distance": 2.0,
+           "far_distance": 25.0,
+           "color": [
+              0.9,
+              0.92,
+              1.0
+           ],
+           "intensity": 1.0,
+           "bone": "bone_headlight"
+        }
+     ],
+    "selection_icon": {
+        "diameter": 5.0
+    },
+    "mesh_bounds": [
+        1.31,
+        1.31,
+        2.17
+    ],
+    "TEMP_texelinfo": 4.07719
+}

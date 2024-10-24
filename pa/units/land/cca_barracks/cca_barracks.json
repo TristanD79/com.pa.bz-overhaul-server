@@ -3,24 +3,41 @@
     "unit_name": "CCA Barracks",
     "display_name": "!LOC:Barracks",
     "description": "!LOC:Barracks - Houses and deploys infantrymen.",
-    "si_name": "artillery_unit_launcher",
+    "si_name": "bz_barracks",
     "max_health": 5000,
     "build_metal_cost": 8,
     "atrophy_rate": 25,
     "atrophy_cool_down": 15.0,
     "spawn_layers": "WL_LandHorizontal",
+    "storage": {
+        "energy": 250,
+        "metal": 10
+    },
+    "rolloff_dirs": [
+        [
+            0,
+            -1,
+            0
+        ]
+    ],
+    "wait_to_rolloff_time": 0,
+    "factory_cooldown_time": 3.0,
+    "buildable_types": "UNITTYPE_Custom31 & CannonBuildable",
     "unit_types": [
         "UNITTYPE_Custom31",
         "UNITTYPE_FabBuild",
-        "UNITTYPE_Structure",
         "UNITTYPE_Basic",
-        "UNITTYPE_Artillery",
-        "UNITTYPE_Defense"
+        "UNITTYPE_Structure",
+        "UNITTYPE_Factory",
+        "UNITTYPE_Construction",
+        "UNITTYPE_Offense",
+        "UNITTYPE_Land"
     ],
     "command_caps": [
+        "ORDER_FactoryBuild",
         "ORDER_Attack"
     ],
-    "guard_layer": "WL_AnySurface",
+    "guard_layer": "WL_LandHorizontal",
     "recon": {
         "observer": {
             "items": [
@@ -35,26 +52,19 @@
     },
     "model": [
         {
-            "layer": "WL_LandHorizontal",
-            "filename": "/pa/units/land/cca_barracks/cca_barracks.papa",
-            "animtree": "/pa/anim/anim_trees/barracks_anim_tree.json"
+            "filename": "/pa/units/land/cca_barracks/cca_barracks.papa"
         }
     ],
     "nearby_target_tick_update_interval": 15,
     "tools": [
         {
-            "spec_id": "/pa/units/land/cca_barracks/cca_barracks_tool_weapon.json",
-            "aim_bone": "bone_deploy",
-            "muzzle_bone": "bone_deploy"
+            "spec_id": "/pa/tools/recycler_build_arm/recycler_build_arm.json",
+            "aim_bone": "bone_root"
         }
     ],
     "events": {
         "build_complete": {
             "audio_cue": "/SE/Build_Complete/structure_small"
-        },
-        "fired": {
-            "audio_cue": "/SE/Weapons/structure/artillery_short_fire",
-            "effect_spec": "/pa/units/land/cca_barracks/cca_barracks_fire.pfx socket_muzzle"
         },
         "died": {
             "audio_cue": "/SE/Death/structure_small",
@@ -63,7 +73,7 @@
     },
     "audio": {
         "selection_response": {
-            "cue": "/SE/Selection/structure/artillery"
+            "cue": "/SE/Selection/structure/structure_small"
         }
     },
     "selection_icon": {

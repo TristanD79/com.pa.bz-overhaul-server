@@ -75,18 +75,16 @@
    "tools": [
       {
          "spec_id": "/pa/tools/weapon_cca_apc_troop/weapon_cca_apc_troop.json",
-         "fire_event": "fired0",
-         "aim_bone": "bone_root",
-         "muzzle_bone": "bone_deploy",
-         "primary_weapon": true
+         "aim_bone": "bone_deploy_aim",
+         "muzzle_bone": "bone_deploy_aim"
       }
    ],
    "events": {
       "build_complete": {
          "audio_cue": "/SE/Build_Complete/veh"
       },
-      "fired0": {
-         "audio_cue": "/SE/Weapons/veh/tank_light_fire",
+      "fired": {
+         "audio_cue": "/SE/Weapons/structure/artillery_short_fire",
          "effect_spec": ""
       },
       "died": {

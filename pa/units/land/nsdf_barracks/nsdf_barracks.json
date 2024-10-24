@@ -3,47 +3,41 @@
     "unit_name": "NSDF Barracks",
     "display_name": "!LOC:Barracks",
     "description": "!LOC:Barracks - Houses and deploys infantrymen.",
-    "si_name": "artillery_unit_launcher",
+    "si_name": "bz_barracks",
     "max_health": 5000,
     "build_metal_cost": 8,
     "atrophy_rate": 25,
     "atrophy_cool_down": 15.0,
     "spawn_layers": "WL_LandHorizontal",
+    "storage": {
+        "energy": 250,
+        "metal": 10
+    },
+    "rolloff_dirs": [
+        [
+            0,
+            -1,
+            0
+        ]
+    ],
+    "wait_to_rolloff_time": 0,
+    "factory_cooldown_time": 3.0,
+    "buildable_types": "UNITTYPE_Custom30 & CannonBuildable",
     "unit_types": [
         "UNITTYPE_Custom30",
         "UNITTYPE_FabBuild",
-        "UNITTYPE_Structure",
         "UNITTYPE_Basic",
-        "UNITTYPE_Artillery",
-        "UNITTYPE_Defense"
+        "UNITTYPE_Structure",
+        "UNITTYPE_Factory",
+        "UNITTYPE_Construction",
+        "UNITTYPE_Offense",
+        "UNITTYPE_Land"
     ],
-    "buildable_types": "UNITTYPE_Custom30 & CannonBuildable",
-    "factory_cooldown_time": 3.0,
-    "wait_to_rolloff_time": 3.0,
-    "factory": {
-        "deploy_projectile": "/pa/units/land/unit_cannon/unit_cannon_deploy.json",
-        "store_units": true,
-        "pass_on_orders": false,
-        "spawn_points": [
-            "bone_root",
-            "bone_root",
-            "bone_root",
-            "bone_root",
-            "bone_root",
-            "bone_root",
-            "bone_root",
-            "bone_root",
-            "bone_root",
-            "bone_root"
-        ],
-        "hide_deploy_projectile": true,
-        "hide_stored_units": true
-    },
     "command_caps": [
         "ORDER_FactoryBuild",
         "ORDER_Attack"
     ],
-    "guard_layer": "WL_AnySurface",
+    "guard_layer": "WL_LandHorizontal",
     "recon": {
         "observer": {
             "items": [
@@ -58,38 +52,19 @@
     },
     "model": [
         {
-            "layer": "WL_LandHorizontal",
-            "filename": "/pa/units/land/nsdf_barracks/nsdf_barracks.papa",
-            "animations": {
-                "aim_up": "/pa/units/land/unit_cannon/unit_cannon_anim_aimUp.papa",
-                "start": "/pa/units/land/unit_cannon/unit_cannon_anim_start.papa",
-                "build": "/pa/units/land/unit_cannon/unit_cannon_anim_build.papa",
-                "end": "/pa/units/land/unit_cannon/unit_cannon_anim_end.papa"
-            },
-            "animtree": "/pa/anim/anim_trees/unit_cannon_anim_tree.json"
+            "filename": "/pa/units/land/nsdf_barracks/nsdf_barracks.papa"
         }
     ],
     "nearby_target_tick_update_interval": 15,
     "tools": [
         {
-            "spec_id": "/pa/units/land/nsdf_barracks/nsdf_barracks_tool_weapon.json",
-            "record_index": 0,
-            "aim_bone": "bone_deploy",
-            "muzzle_bone": "bone_deploy"
-        },
-        {
-            "spec_id": "/pa/units/land/unit_cannon/unit_cannon_build_arm.json",
-            "record_index": 1,
+            "spec_id": "/pa/tools/recycler_build_arm/recycler_build_arm.json",
             "aim_bone": "bone_root"
         }
     ],
     "events": {
         "build_complete": {
             "audio_cue": "/SE/Build_Complete/structure_small"
-        },
-        "fired": {
-            "audio_cue": "/SE/Weapons/structure/unit_cannon_fire",
-            "effect_spec": ""
         },
         "died": {
             "audio_cue": "/SE/Death/structure_small",
@@ -98,7 +73,7 @@
     },
     "audio": {
         "selection_response": {
-            "cue": "/SE/Selection/structure/unit_cannon"
+            "cue": "/SE/Selection/structure/structure_small"
         }
     },
     "selection_icon": {

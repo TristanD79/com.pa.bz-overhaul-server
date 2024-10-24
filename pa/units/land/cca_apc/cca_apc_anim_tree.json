@@ -5,12 +5,12 @@
     "skeleton_controls": [
         {
             "type": "procedural_aim",
-            "rotation_bone": "bone_root",
+            "rotation_bone": "bone_deploy_aim",
             "rotation_axis": "z"
         },
         {
             "type": "procedural_aim",
-            "rotation_bone": "bone_root",
+            "rotation_bone": "bone_deploy_aim",
             "rotation_axis": "x"
         }
     ]

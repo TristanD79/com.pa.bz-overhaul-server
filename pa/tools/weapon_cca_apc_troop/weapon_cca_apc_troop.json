@@ -1,0 +1,32 @@
+{
+    "base_spec": "/pa/tools/base_bot_weapon/base_bot_weapon.json",
+    "ammo_id": "/pa/ammo/cca_apc_troop_ammo/cca_apc_troop_ammo.json",
+    "min_firing_velocity": 10,
+    "max_firing_velocity": 40,
+    "max_range": 30,
+    "rate_of_fire": 4.5,
+    "carpet_fire": true,
+    "carpet_wait_for_full_ammo": true,
+    "ammo_source": "metal",
+    "ammo_capacity": 5,
+    "ammo_demand": 0.04,
+    "ammo_per_shot": 1,
+    "yaw_rate": 120,
+    "pitch_rate": 90,
+    "yaw_range": 360,
+    "pitch_range": 0,
+    "firing_arc_yaw": 0,
+    "firing_arc_pitch": 30,
+    "auto_attack": false,
+    "manual_fire": true,
+    "firing_standard_deviation": 3.5,
+    "physics": {
+        "radius": 1,
+        "gravity_scalar": 1,
+        "add_to_spatial_db": false
+    },
+    "idle_aim_delay": 0.5,
+    "target_layers": [
+        "WL_LandHorizontal"
+    ]
+}

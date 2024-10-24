@@ -1,0 +1,17 @@
+{
+    "base_spec": "/pa/tools/weapon_Chaingun/weapon_Chaingun.json",
+    "ammo_id": "/pa/ammo/Chaingun_ammo/Chaingun_ammo.json",
+    "rate_of_fire": 5.0,
+    "max_range": 75,
+    "yaw_rate": 120,
+    "pitch_rate": 55,
+    "yaw_range": 50,
+    "pitch_range": 100,
+    "spread_fire": true,
+    "auto_attack": true,
+    "idle_aim_delay": 1.0,
+    "target_layers": [
+        "WL_LandHorizontal",
+        "WL_Air"
+    ]
+}
