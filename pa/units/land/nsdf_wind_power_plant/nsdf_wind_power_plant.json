@@ -48,22 +48,27 @@
     },
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/energy"
+            "audio_cue": "/SE/Build_Complete/nsdf/nsdf_building_complete"
         },
-        "enabled":{
-            "audio_cue":"/SE/Buildings/energy_enabled"
-         },
-         "disabled":{
-            "audio_cue":"/SE/Buildings/energy_disabled"
-         },
+        "enabled": {
+            "audio_cue": "/SE/Buildings/energy_enabled"
+        },
+        "disabled": {
+            "audio_cue": "/SE/Buildings/energy_disabled"
+        },
         "died": {
-            "audio_cue": "/SE/Death/structure_small",
+            "audio_cue": "/SE/Death/large_vehicle",
             "effect_scale": 1.0
         }
     },
     "audio": {
         "selection_response": {
             "cue": "/SE/Selection/structure/energy"
+        },
+        "loops": {
+            "enabled": {
+                "cue": "/SE/Buildings/building_wpow"
+            }
         }
     },
     "selection_icon": {

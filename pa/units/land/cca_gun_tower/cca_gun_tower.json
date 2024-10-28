@@ -55,8 +55,8 @@
             "aim_bone": "bone_pitch",
             "projectiles_per_fire": 2,
             "muzzle_bone": [
-               "socket_muzzle01",
-               "socket_muzzle02"
+                "socket_muzzle01",
+                "socket_muzzle02"
             ]
         }
     ],
@@ -65,13 +65,13 @@
     },
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/structure_small"
+            "audio_cue": "/SE/Build_Complete/cca/cca_building_complete"
         },
         "fired": {
-            "audio_cue": "/SE/Weapons/veh/tank_light_fire"
+            "audio_cue": "/SE/Weapons/g_c_chaingun_fire"
         },
         "died": {
-            "audio_cue": "/SE/Death/structure_small",
+            "audio_cue": "/SE/Death/building",
             "effect_scale": 0.6
         }
     },

@@ -55,7 +55,7 @@
     },
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/radar"
+            "audio_cue": "/SE/Build_Complete/cca/cca_building_complete"
         },
         "enabled": {
             "audio_cue": "/SE/Buildings/radar_enabled"
@@ -64,7 +64,7 @@
             "audio_cue": "/SE/Buildings/radar_disabled"
         },
         "died": {
-            "audio_cue": "/SE/Death/radar",
+            "audio_cue": "/SE/Death/building",
             "effect_scale": 1.2
         }
     },

@@ -74,12 +74,28 @@
     ],
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/land"
+            "audio_cue": "/SE/Build_Complete/nsdf/recycler"
         },
         "died": {
             "audio_cue": "/SE/Death/land_large",
             "effect_spec": "/pa/effects/specs/default_building_explosion_large.pfx",
             "effect_scale": 1.0
+        }
+    },
+    "audio": {
+        "loops": {
+            "build": {
+                "cue": "/SE/Construction/recycler_build_loop",
+                "flag": "build_target_changed",
+                "should_start_func": "has_build_target",
+                "should_stop_func": "no_build_target"
+            }
+        },
+        "selection_response": {
+            "cue": "/SE/Selection/nsdf/commander/recycler"
+        },
+        "command_response": {
+            "cue": "/SE/Confirmation/nsdf/commander/recycler"
         }
     },
     "fx_offsets": [
@@ -204,19 +220,6 @@
             ]
         }
     ],
-    "audio": {
-        "loops": {
-            "build": {
-                "cue": "/SE/Construction/Commander_contruction_beam_loop",
-                "flag": "build_target_changed",
-                "should_start_func": "has_build_target",
-                "should_stop_func": "no_build_target"
-            }
-        },
-        "selection_response": {
-            "cue": "/SE/Selection/structure/factory"
-        }
-    },
     "headlights": [
         {
             "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",

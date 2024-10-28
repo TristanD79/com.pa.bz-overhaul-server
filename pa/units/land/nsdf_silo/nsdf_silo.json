@@ -39,7 +39,7 @@
     "model": [
         {
             "layer": "WL_LandHorizontal",
-            "filename": "/pa/units/land/nsdf_silo/nsdf_silo.papa"        
+            "filename": "/pa/units/land/nsdf_silo/nsdf_silo.papa"
         }
     ],
     "death_weapon": {
@@ -47,10 +47,10 @@
     },
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/energy"
+            "audio_cue": "/SE/Build_Complete/nsdf/nsdf_building_complete"
         },
         "died": {
-            "audio_cue": "/SE/Death/Factory",
+            "audio_cue": "/SE/Death/building",
             "effect_spec": "/pa/effects/specs/default_building_explosion_large.pfx",
             "effect_scale": 0.5
         }

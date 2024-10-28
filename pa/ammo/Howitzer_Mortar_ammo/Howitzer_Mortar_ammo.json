@@ -19,7 +19,7 @@
     },
     "events": {
         "died": {
-            "audio_cue": "/SE/Impacts/shell_bullet",
+            "audio_cue": "/SE/Impacts/impact_heavy_cannon",
             "effect_spec": "/pa/effects/specs/default_explosion.pfx",
             "effect_scale": 0.8
         }

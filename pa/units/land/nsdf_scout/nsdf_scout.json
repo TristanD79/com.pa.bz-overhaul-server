@@ -88,27 +88,30 @@
    ],
    "events": {
       "build_complete": {
-         "audio_cue": "/SE/Build_Complete/veh"
+         "audio_cue": "/SE/Build_Complete/nsdf/recycler_unit_built"
       },
       "fired": {
-         "audio_cue": "/SE/Weapons/veh/tank_light_fire",
+         "audio_cue": "/SE/Weapons/g_c_minigun_fire",
          "effect_spec": ""
       },
       "died": {
-         "audio_cue": "/SE/Death/Veh"
+         "audio_cue": "/SE/Death/small_vehicle"
       }
    },
    "audio": {
       "loops": {
          "move": {
-            "cue": "/SE/Movement/veh/tank_hover_loop",
+            "cue": "/SE/Movement/nsdf/veh/scout_loop",
             "flag": "vel_changed",
             "should_start_func": "is_moving",
             "should_stop_func": "is_not_moving"
          }
       },
       "selection_response": {
-         "cue": "/SE/Selection/veh/tank_hover"
+         "cue": "/SE/Selection/nsdf/veh/scout"
+      },
+      "command_response": {
+         "cue": "/SE/Confirmation/nsdf/veh/scout"
       }
    },
    "fx_offsets": [
@@ -182,5 +185,5 @@
       6.01,
       2.08
    ],
-   "TEMP_texelinfo": 25.7958
+   "TEMP_texelinfo": 8.60584
 }

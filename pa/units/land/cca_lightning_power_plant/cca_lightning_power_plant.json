@@ -48,7 +48,7 @@
     },
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/energy"
+            "audio_cue": "/SE/Build_Complete/cca/cca_building_complete"
         },
         "enabled":{
             "audio_cue":"/SE/Buildings/energy_enabled"
@@ -57,13 +57,21 @@
             "audio_cue":"/SE/Buildings/energy_disabled"
          },
         "died": {
-            "audio_cue": "/SE/Death/structure_small",
+            "audio_cue": "/SE/Death/building",
             "effect_scale": 1.0
         }
     },
     "audio": {
         "selection_response": {
             "cue": "/SE/Selection/structure/energy"
+        },
+        "loops": {
+            "idle": {
+                "cue": "/SE/Buildings/building_lpow",
+                "flag": "enable_changed",
+                "should_start_func": "is_enabled",
+                "should_stop_func": "is_disabled"
+            }
         }
     },
     "selection_icon": {

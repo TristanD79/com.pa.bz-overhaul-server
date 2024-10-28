@@ -90,23 +90,32 @@
    ],
    "events": {
       "build_complete": {
-         "audio_cue": "/SE/Build_Complete/veh"
+         "audio_cue": "/SE/Build_Complete/cca/recycler_unit_built"
       },
       "died": {
-         "audio_cue": "/SE/Death/Veh"
+         "audio_cue": "/SE/Death/medium_vehicle"
       }
    },
    "audio": {
       "loops": {
          "move": {
-            "cue": "/SE/Movement/veh/tank_hover_loop",
+            "cue": "/SE/Movement/nsdf/veh/construction_rig_loop",
             "flag": "vel_changed",
             "should_start_func": "is_moving",
             "should_stop_func": "is_not_moving"
-         }
+         },
+         "build": {
+            "cue": "/SE/Construction/construction_rig_build_loop",
+            "flag": "build_target_changed",
+            "should_start_func": "has_build_target",
+            "should_stop_func": "no_build_target"
+        }
       },
       "selection_response": {
-         "cue": "/SE/Selection/veh/tank_hover"
+         "cue": "/SE/Selection/cca/veh/construction_rig"
+      },
+      "command_response": {
+         "cue": "/SE/Confirmation/cca/veh/construction_rig"
       }
    },
    "fx_offsets": [

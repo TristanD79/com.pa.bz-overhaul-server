@@ -64,10 +64,10 @@
     ],
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/structure_small"
+            "audio_cue": "/SE/Build_Complete/cca/cca_building_complete"
         },
         "died": {
-            "audio_cue": "/SE/Death/structure_small",
+            "audio_cue": "/SE/Death/building",
             "effect_scale": 0.6
         }
     },

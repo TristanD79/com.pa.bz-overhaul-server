@@ -72,10 +72,10 @@
     ],
        "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/barrier"
+            "audio_cue": "/SE/Build_Complete/nsdf/nsdf_building_complete"
         },
         "died": {
-            "audio_cue": "/SE/Death/barrier",
+            "audio_cue": "/SE/Death/small_vehicle",
             "effect_spec": "/pa/effects/specs/default_explosion.pfx",
             "effect_scale": 1.25
         }

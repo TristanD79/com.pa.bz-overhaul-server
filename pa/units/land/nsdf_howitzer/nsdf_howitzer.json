@@ -61,23 +61,32 @@
     ],
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/structure_small"
+           "audio_cue": "/SE/Build_Complete/avartl"
         },
         "fired": {
-            "audio_cue": "/SE/Weapons/structure/artillery_long_fire",
-            "effect_spec": ""
+           "audio_cue": "/SE/Weapons/g_c_heavy_artillery_fire",
+           "effect_spec": ""
         },
         "died": {
-            "audio_cue": "/SE/Death/structure_small",
-            "effect_spec": "/pa/effects/specs/default_building_explosion_large.pfx",
-            "effect_scale": 0.5
+            "audio_cue": "/SE/Death/medium_vehicle"
         }
-    },
-    "audio": {
+     },
+     "audio": {
+        "loops": {
+           "move": {
+              "cue": "/SE/Movement/nsdf/veh/artillery_loop",
+              "flag": "vel_changed",
+              "should_start_func": "is_moving",
+              "should_stop_func": "is_not_moving"
+           }
+        },
         "selection_response": {
-            "cue": "/SE/Selection/structure/artillery"
+           "cue": "/SE/Selection/nsdf/veh/artillery"
+        },
+        "command_response": {
+           "cue": "/SE/Confirmation/nsdf/veh/artillery"
         }
-    },
+     },
     "headlights": [
         {
            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",

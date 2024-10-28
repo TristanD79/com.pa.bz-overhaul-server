@@ -69,7 +69,7 @@
     ],
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/structure_small"
+            "audio_cue": "/SE/Build_Complete/cca/cca_building_complete"
         },
         "build": {
             "cue": "/SE/Construction/Fab_contruction_beam_loop",
@@ -78,7 +78,7 @@
             "should_stop_func": "no_build_target"
         },
         "died": {
-            "audio_cue": "/SE/Death/Factory",
+            "audio_cue": "/SE/Death/building",
             "effect_spec": "/pa/effects/specs/default_building_explosion_large.pfx",
             "effect_scale": 1.0
         }
@@ -86,7 +86,7 @@
     "audio": {
         "loops": {
             "build": {
-                "cue": "/SE/Construction/Fab_contruction_beam_loop",
+                "cue": "/SE/Construction/repair",
                 "flag": "build_target_changed",
                 "should_start_func": "has_build_target",
                 "should_stop_func": "no_build_target"

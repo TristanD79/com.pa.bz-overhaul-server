@@ -192,7 +192,7 @@
             "audio_cue": "/SE/Build_Complete/barrier"
         },
         "died": {
-            "audio_cue": "/SE/Death/barrier",
+            "audio_cue": "/SE/Death/small_vehicle",
             "effect_spec": "/pa/units/land/bot_bomb/bot_bomb_ammo_explosion.pfx"
         }
     },

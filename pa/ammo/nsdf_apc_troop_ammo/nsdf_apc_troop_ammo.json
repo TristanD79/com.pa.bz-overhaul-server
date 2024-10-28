@@ -11,7 +11,7 @@
     "audio_loop": "/SE/Movement/missile/artillery_short_missile_fly_loop",
     "events": {
         "died": {
-            "audio_cue": "/SE/Impacts/unit_cannon_unit_impact",
+            "audio_cue": "/SE/Impacts/impact_soldier_spawn_apc",
             "effect_spec": "/pa/units/air/unit_shell/unit_shell_deploy.pfx",
             "effect_scale": 0.5
         }

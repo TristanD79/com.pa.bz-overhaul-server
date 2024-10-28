@@ -72,12 +72,12 @@
             "filename": "/pa/units/land/nsdf_supply_depot/nsdf_supply_depot.papa"
         }
     ],
-       "events": {
+    "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/structure_small"
+            "audio_cue": "/SE/Build_Complete/nsdf/nsdf_building_complete"
         },
         "died": {
-            "audio_cue": "/SE/Death/Factory",
+            "audio_cue": "/SE/Death/building",
             "effect_spec": "/pa/effects/specs/default_building_explosion_large.pfx",
             "effect_scale": 1.0
         }

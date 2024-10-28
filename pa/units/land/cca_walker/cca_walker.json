@@ -99,18 +99,18 @@
     ],
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/bot"
+            "audio_cue": "/SE/Build_Complete/cca/mobile_unit_factory_unit_built"
         },
         "fired0": {
-            "audio_cue": "/SE/Weapons/structure/laser_defense_single_fire",
+            "audio_cue": "/SE/Weapons/g_c_blastcannon_fire",
             "effect_spec": ""
         },
         "fired1": {
-            "audio_cue": "/SE/Weapons/veh/tank_light_fire",
+            "audio_cue": "/SE/Weapons/g_m_popgun_fire",
             "effect_spec": ""
         },
         "died": {
-            "audio_cue": "/SE/Death/Bot",
+            "audio_cue": "/SE/Death/large_vehicle",
             "effect_spec": "/pa/effects/specs/default_explosion_bot_t2.pfx",
             "effect_scale": 1.0
         }
@@ -118,14 +118,17 @@
     "audio": {
         "loops": {
             "move": {
-                "cue": "/SE/Movement/bot/ZZZT2_artillery_loop",
+                "cue": "/SE/Movement/cca/bot/walker_loop",
                 "flag": "vel_changed",
                 "should_start_func": "is_moving",
                 "should_stop_func": "is_not_moving"
             }
         },
         "selection_response": {
-            "cue": "/SE/Selection/bot/T2_assault"
+            "cue": "/SE/Selection/cca/bot/walker"
+        },
+        "command_response": {
+            "cue": "/SE/Confirmation/cca/bot/walker"
         }
     },
     "selection_icon": {

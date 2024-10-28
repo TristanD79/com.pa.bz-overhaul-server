@@ -55,46 +55,58 @@
     ],
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/structure_small"
+            "audio_cue": "/SE/Build_Complete/avturr"
         },
         "fired": {
-            "audio_cue": "/SE/Weapons/structure/laser_defense_single_fire"
+            "audio_cue": "/SE/Weapons/g_c_minigun_fire",
+            "effect_spec": ""
         },
         "died": {
-            "audio_cue": "/SE/Death/structure_small",
+            "audio_cue": "/SE/Death/medium_vehicle",
             "effect_spec": "/pa/effects/specs/default_explosion.pfx",
             "effect_scale": 1.35
         }
     },
     "audio": {
+        "loops": {
+            "move": {
+                "cue": "/SE/Movement/nsdf/veh/turret_loop",
+                "flag": "vel_changed",
+                "should_start_func": "is_moving",
+                "should_stop_func": "is_not_moving"
+            }
+        },
         "selection_response": {
-            "cue": "/SE/Selection/structure/structure_small"
+            "cue": "/SE/Selection/nsdf/veh/turret"
+        },
+        "command_response": {
+            "cue": "/SE/Confirmation/nsdf/veh/turret"
         }
     },
     "headlights": [
         {
-           "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
-           "offset": [
-              0.0,
-              0.0,
-              0.0
-           ],
-           "orientation": [
-              0.0,
-              70.0,
-              0.0
-           ],
-           "near_width": 2.0,
-           "near_height": 2.0,
-           "near_distance": 2.0,
-           "far_distance": 25.0,
-           "color": [
-              0.9,
-              0.92,
-              1.0
-           ],
-           "intensity": 2.0,
-           "bone": "bone_headlight"
+            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+            "offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "orientation": [
+                0.0,
+                70.0,
+                0.0
+            ],
+            "near_width": 2.0,
+            "near_height": 2.0,
+            "near_distance": 2.0,
+            "far_distance": 25.0,
+            "color": [
+                0.9,
+                0.92,
+                1.0
+            ],
+            "intensity": 2.0,
+            "bone": "bone_headlight"
         }
     ],
     "selection_icon": {

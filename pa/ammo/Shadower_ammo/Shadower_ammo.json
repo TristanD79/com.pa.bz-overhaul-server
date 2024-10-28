@@ -20,6 +20,11 @@
             0.6,
             0.0
         ]
+    },
+    "events": {
+        "died": {
+            "audio_cue": "/SE/Impacts/rocket_heavy"
+        }
     }
 }
 

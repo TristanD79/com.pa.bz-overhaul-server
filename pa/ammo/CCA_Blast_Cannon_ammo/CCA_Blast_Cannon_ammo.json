@@ -10,5 +10,10 @@
     "lifetime": 1,
     "fx_trail": {
         "filename": "/pa/effects/specs/cannon_CCA_Blast_Cannon_proj_trail.pfx"
+    },
+    "events": {
+        "died": {
+            "audio_cue": "/SE/Impacts/impact_heavy_cannon"
+        }
     }
 }

@@ -81,10 +81,10 @@
    ],
    "events": {
       "build_complete": {
-         "audio_cue": "/SE/Build_Complete/veh"
+         "audio_cue": "/SE/Build_Complete/cca/mobile_unit_factory_unit_built"
       },
       "fired": {
-         "audio_cue": "/SE/Weapons/structure/artillery_short_fire",
+         "audio_cue": "/SE/Weapons/g_soldier_spawn_apc",
          "effect_spec": ""
       },
       "died": {
@@ -94,14 +94,17 @@
    "audio": {
       "loops": {
          "move": {
-            "cue": "/SE/Movement/veh/tank_hover_loop",
+            "cue": "/SE/Movement/cca/veh/apc_loop",
             "flag": "vel_changed",
             "should_start_func": "is_moving",
             "should_stop_func": "is_not_moving"
          }
       },
       "selection_response": {
-         "cue": "/SE/Selection/veh/tank_hover"
+         "cue": "/SE/Selection/cca/veh/apc"
+      },
+      "command_response": {
+         "cue": "/SE/Confirmation/cca/veh/apc"
       }
    },
    "fx_offsets": [

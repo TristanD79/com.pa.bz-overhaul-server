@@ -61,13 +61,13 @@
     },
     "events": {
         "build_complete": {
-            "audio_cue": "/SE/Build_Complete/structure_small"
+            "audio_cue": "/SE/Build_Complete/nsdf/nsdf_building_complete"
         },
         "fired": {
-            "audio_cue": "/SE/Weapons/structure/laser_defense_single_fire"
+            "audio_cue": "/SE/Weapons/g_c_blastcannon_fire"
         },
         "died": {
-            "audio_cue": "/SE/Death/structure_small",
+            "audio_cue": "/SE/Death/building",
             "effect_scale": 0.6
         }
     },
