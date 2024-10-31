@@ -8,7 +8,7 @@
     "build_metal_cost": 1000,
     "production": {
         "energy": 25,
-        "metal": 1
+        "metal": 0.1
     },
     "storage": {
         "energy": 1000,

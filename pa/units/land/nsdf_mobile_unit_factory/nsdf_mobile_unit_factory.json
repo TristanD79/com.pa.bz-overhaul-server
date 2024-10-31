@@ -12,7 +12,7 @@
     "spawn_layers": "WL_LandHorizontal",
     "production": {
         "energy": 5,
-        "metal": 0.5
+        "metal": 0
     },
     "storage": {
         "energy": 500,
