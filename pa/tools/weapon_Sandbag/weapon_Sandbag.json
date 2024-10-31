@@ -1,7 +1,7 @@
 {
     "base_spec": "/pa/tools/base_shell_turret/base_shell_turret.json",
     "ammo_id": "/pa/ammo/Sandbag_ammo/Sandbag_ammo.json",
-    "rate_of_fire": 1.5,
+    "rate_of_fire": 0.67,
     "max_range": 140,
     "yaw_rate": 60,
     "pitch_rate": 45,
