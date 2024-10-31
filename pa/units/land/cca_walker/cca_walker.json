@@ -116,14 +116,6 @@
         }
     },
     "audio": {
-        "loops": {
-            "move": {
-                "cue": "/SE/Movement/cca/bot/walker_loop",
-                "flag": "vel_changed",
-                "should_start_func": "is_moving",
-                "should_stop_func": "is_not_moving"
-            }
-        },
         "selection_response": {
             "cue": "/SE/Selection/cca/bot/walker"
         },

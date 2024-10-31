@@ -27,7 +27,37 @@
                     },
                     "node_walk": {
                         "type": "playback",
-                        "anim_name": "walk"
+                        "anim_name": "walk",
+                        "events": [
+                            {
+                                "time": 0.0,
+                                "type": "audio",
+                                "parameters": {
+                                    "cue": "/SE/Movement/nsdf/bot/walker_rotate"
+                                }
+                            },
+                            {
+                                "time": 0.9,
+                                "type": "audio",
+                                "parameters": {
+                                    "cue": "/SE/Movement/nsdf/bot/walker_step"
+                                }
+                            },
+                            {
+                                "time": 1.1,
+                                "type": "audio",
+                                "parameters": {
+                                    "cue": "/SE/Movement/nsdf/bot/walker_rotate"
+                                }
+                            },
+                            {
+                                "time": 1.9,
+                                "type": "audio",
+                                "parameters": {
+                                    "cue": "/SE/Movement/cca/bot/walker_step"
+                                }
+                            }
+                        ]
                     }
                 }
             },
