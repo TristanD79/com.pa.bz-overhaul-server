@@ -96,23 +96,6 @@
             "cue": "/SE/Selection/structure/air"
         }
     },
-    "fx_offsets": [
-        {
-            "type": "build",
-            "filename": "/pa/effects/specs/fab_spray.pfx",
-            "bone": "bone_platform",
-            "offset": [
-                0,
-                0,
-                0
-            ],
-            "orientation": [
-                0,
-                0,
-                0
-            ]
-        }
-    ],
     "selection_icon": {
         "diameter": 64.0
     },
