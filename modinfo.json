@@ -4,11 +4,11 @@
     "display_name": "Battlezone: RTS Tactics",
     "description": "A full conversion mod that brings both factions from Battlezone to PA.",
     "author": "Tristan",
-    "version": "0.5",
-    "build": "116982",
-    "date": "2024-02-21",
+    "version": "0.9",
+    "build": "120799",
+    "date": "2024-11-01",
     "signature": "not yet implemented",
-    "forum": "",
+    "forum": "https://steamcommunity.com/app/386070/discussions/0/4703538708010312949/",
     "icon": "https://static.wikia.nocookie.net/battlezone/images/7/79/BDog_Poster.gif",
     "priority": 100,
     "category": [
@@ -17,7 +17,8 @@
         "faction" 
     ],
     "dependencies": [
-        "com.pa.bz-overhaul-client"
+        "com.pa.bz-overhaul-client",
+        "com.pa.ferretmaster.map-effects-server"
     ],
     "scenes": {
         "system_editor": [
