@@ -80,7 +80,7 @@
         {
             "spec_id": "/pa/tools/weapon_AT_Stabber/weapon_AT_Stabber.json",
             "fire_event": "fired0",
-            "aim_bone": "bone_leftElbow",
+            "aim_bone": "bone_torso",
             "projectiles_per_fire": 2,
             "muzzle_bone": [
                 "socket_leftMuzzle",

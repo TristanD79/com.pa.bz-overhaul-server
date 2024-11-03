@@ -7,7 +7,7 @@
             },
             "living": {
                 "type": "aim_blend",
-                "aim_bone_root": "bone_head",
+                "aim_bone_root": "bone_neck",
                 "node_aim_down": {
                     "type": "playback",
                     "anim_name": "aim_down"
