@@ -71,7 +71,7 @@
     "tools": [
         {
             "spec_id": "/pa/units/land/cca_soldier/cca_soldier_weapon_Chaingun.json",
-            "aim_bone": "bone_rightForearm",
+            "aim_bone": "bone_hip",
             "muzzle_bone": "socket_muzzle"
         }
     ],
@@ -99,30 +99,30 @@
     },
     "headlights": [
         {
-           "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
-           "offset": [
-              0.0,
-              0.0,
-              0.0
-           ],
-           "orientation": [
-              0.0,
-              70.0,
-              0.0
-           ],
-           "near_width": 2.0,
-           "near_height": 2.0,
-           "near_distance": 2.0,
-           "far_distance": 25.0,
-           "color": [
-              0.9,
-              0.92,
-              1.0
-           ],
-           "intensity": 1.0,
-           "bone": "bone_headlight"
+            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+            "offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "orientation": [
+                0.0,
+                70.0,
+                0.0
+            ],
+            "near_width": 2.0,
+            "near_height": 2.0,
+            "near_distance": 2.0,
+            "far_distance": 25.0,
+            "color": [
+                0.9,
+                0.92,
+                1.0
+            ],
+            "intensity": 1.0,
+            "bone": "bone_headlight"
         }
-     ],
+    ],
     "selection_icon": {
         "diameter": 5.0
     },
