@@ -6,8 +6,8 @@
         0.49,
         1
     ],
-    "base_texture": "/pa/terrain/bz_luna/textures/base/moon_tile_diffuse.papa",
-    "normal_texture": "/pa/terrain/bz_luna/textures/base/moon_tile_normal.papa",
+    "base_texture": "/pa/terrain/moon/textures/base/moon_tile_diffuse.papa",
+    "normal_texture": "/pa/terrain/moon/textures/base/moon_tile_normal.papa",
     "layers": [
         {
             "note": "0",
@@ -113,7 +113,7 @@
             ],
             "op": "BO_Subtract",
             "proj": "BP_None",
-            "brush_spec": "/pa/terrain/bz_luna/brushes/crater_01.json",
+            "brush_spec": "/pa/terrain/moon/brushes/crater_01.json",
             "scale": [
                 0.1,
                 0.1,
@@ -135,7 +135,7 @@
             ],
             "op": "BO_Subtract",
             "proj": "BP_Bend",
-            "brush_spec": "/pa/terrain/bz_luna/brushes/moon_crater_02.json",
+            "brush_spec": "/pa/terrain/moon/brushes/moon_crater_02.json",
             "scale": [
                 1,
                 1,
@@ -176,7 +176,7 @@
                 0,
                 14
             ],
-            "feature_spec": "/pa/terrain/bz_luna/features/moon_rock_02.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_02.json",
             "scale": [
                 1.0,
                 1.0,
@@ -214,7 +214,7 @@
                 0,
                 12
             ],
-            "feature_spec": "/pa/terrain/bz_luna/features/moon_rock_04.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_04.json",
             "scale": [
                 1.0,
                 1.0,
@@ -252,7 +252,7 @@
                 0,
                 10
             ],
-            "feature_spec": "/pa/terrain/bz_luna/features/moon_rock_06.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_06.json",
             "scale": [
                 1.0,
                 1.0,
@@ -271,7 +271,7 @@
                 0,
                 6
             ],
-            "feature_spec": "/pa/terrain/bz_luna/features/moon_rock_07.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_07.json",
             "scale": [
                 1.0,
                 1.0,
@@ -328,7 +328,7 @@
                 0,
                 3
             ],
-            "feature_spec": "/pa/terrain/bz_luna/features/moon_rock_10.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_10.json",
             "scale": [
                 1.0,
                 1.0,
@@ -347,7 +347,7 @@
                 0,
                 1
             ],
-            "feature_spec": "/pa/terrain/bz_luna/features/moon_rock_11.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_11.json",
             "scale": [
                 1.0,
                 1.0,
@@ -397,7 +397,7 @@
             ],
             "scale_variation": 0.25,
             "count": 1,
-            "material_spec": "/pa/terrain/bz_luna/decals/moon_decal_01.json"
+            "material_spec": "/pa/terrain/moon/decals/moon_decal_01.json"
         },
         {
             "layer": 4,
@@ -421,7 +421,7 @@
             ],
             "scale_variation": 0.25,
             "count": 1,
-            "material_spec": "/pa/terrain/bz_luna/decals/moon_decal_02.json"
+            "material_spec": "/pa/terrain/moon/decals/moon_decal_02.json"
         },
         {
             "layer": 6,
@@ -445,7 +445,7 @@
             ],
             "scale_variation": 0.25,
             "count": 1,
-            "material_spec": "/pa/terrain/bz_luna/decals/moon_decal_03.json"
+            "material_spec": "/pa/terrain/moon/decals/moon_decal_03.json"
         },
         {
             "layer": 7,
@@ -469,7 +469,7 @@
             ],
             "scale_variation": 0.75,
             "count": 1,
-            "material_spec": "/pa/terrain/bz_luna/decals/moon_decal_04.json"
+            "material_spec": "/pa/terrain/moon/decals/moon_decal_04.json"
         },
         {
             "layer": 5,
@@ -493,7 +493,7 @@
             ],
             "scale_variation": 0.4,
             "count": 1,
-            "material_spec": "/pa/terrain/bz_luna/decals/moon_decal_05.json"
+            "material_spec": "/pa/terrain/moon/decals/moon_decal_05.json"
         }
     ]
 }

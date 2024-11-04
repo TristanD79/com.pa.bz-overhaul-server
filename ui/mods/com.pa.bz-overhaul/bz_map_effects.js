@@ -56,6 +56,49 @@ var lunaMazeEffects = [
     { "planet": 0, "pos": [658.3604736328125, 396.42041015625, 268.14776611328125], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" }
 ]
 
+var lavaPathwaysEffects = [
+    { "planet": 0, "pos": [-611.5958862304688, 35.78248596191406, 339.998291015625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-611.5958862304688, 35.78248596191406, -339.998291015625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-520.842529296875, 93.96003723144531, 453.1487121582031], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-520.842529296875, 93.96003723144531, -453.1487121582031], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-584.687744140625, -366.88275146484375, -102.2200927734375], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-584.687744140625, -366.88275146484375, 102.2200927734375], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-437.1162109375, -203.5938720703125, -502.55657958984375], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-437.1162109375, -203.5938720703125, 502.55657958984375], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-418.9739990234375, -354.7017822265625, -430.42626953125], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-418.9739990234375, -354.7017822265625, 430.42626953125], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [110.58854675292969, -312.2930908203125, -617.0128784179688], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [110.58854675292969, -312.2930908203125, 617.0128784179688], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [48.50217056274414, -200.9683837890625, -667.0497436523438], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [48.50217056274414, -200.9683837890625, 667.0497436523438], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [40.38710021972656, -596.8663940429688, -354.831787109375], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [40.38710021972656, -596.8663940429688, 354.831787109375], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-57.907142639160156, 136.66354370117188, -686.045166015625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-57.907142639160156, 136.66354370117188, 686.045166015625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [84.0349349975586, 92.26923370361328, -685.927978515625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [84.0349349975586, 92.26923370361328, 685.927978515625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-389.2044677734375, 565.4822387695312, -123.49535369873047], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-389.2044677734375, 565.4822387695312, 123.49535369873047], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-597.7518310546875, 337.7652587890625, 132.10699462890625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [-597.7518310546875, 337.7652587890625, -132.10699462890625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [165.20062255859375, 465.1417236328125, 495.800048828125], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [165.20062255859375, 465.1417236328125, -495.800048828125], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [455.76837158203125, 532.0156860351562, -26.69001007080078], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [455.76837158203125, 532.0156860351562, 26.69001007080078], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [490.5609130859375, -486.7626037597656, -119.799560546875], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [490.5609130859375, -486.7626037597656, 119.799560546875], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [538.1121215820312, -446.5853271484375, -49.17350769042969], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [538.1121215820312, -446.5853271484375, 49.17350769042969], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [642.821044921875, -252.73977661132812, -104.13270568847656], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [642.821044921875, -252.73977661132812, 104.13270568847656], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [517.0081787109375, -16.119102478027344, -486.4061279296875], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [517.0081787109375, -16.119102478027344, 486.4061279296875], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [45.055580139160156, 675.9497680664062, -168.23963928222656], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [45.055580139160156, 675.9497680664062, 168.23963928222656], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [143.0225830078125, 683.3234252929688, -32.050933837890625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [143.0225830078125, 683.3234252929688, 32.050933837890625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" }
+]
+
 
 //change the name of this to something different
 function addBzMapEffects() {
@@ -63,6 +106,7 @@ function addBzMapEffects() {
         //assign each maps effects here
         model.mapEffects()['BZ Luna Plains System'] = lunaPlainsEffects
         model.mapEffects()['BZ Luna Maze System'] = lunaMazeEffects
+        model.mapEffects()['BZ Lava Pathways System'] = lavaPathwaysEffects
     }
     else { _.delay(addBzMapEffects, 1000) }//remember to change this as well
 }

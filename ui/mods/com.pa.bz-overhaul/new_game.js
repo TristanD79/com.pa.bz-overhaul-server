@@ -1,4 +1,6 @@
 model.biomes.push('bz_luna')
+model.biomes.push('bz_ice')
+model.biomes.push('bz_lava')
 
 var bzNewGameLoaded;
 

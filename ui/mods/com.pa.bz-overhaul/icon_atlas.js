@@ -1,5 +1,7 @@
 var pabzIcons = [
     'bz_luna_energy_splat_01',
+    'bz_ice_energy_splat_01',
+    'bz_lava_energy_splat_01',
 
     "bz_recycler",
     "bz_mobile_unit_factory",
