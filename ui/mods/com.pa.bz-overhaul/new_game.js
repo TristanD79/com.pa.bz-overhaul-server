@@ -157,3 +157,11 @@ if (!bzNewGameLoaded) {
   }
   bzNewGame();
 }
+
+var bzLearnMoreOnSteam = function(){
+  engine.call( 'web.launchPage', 'https://steamcommunity.com/app/386070/discussions/0/4703538708010312949' );
+}
+
+var bzDiscussOnPatreon = function(){
+  engine.call( 'web.launchPage', 'https://www.patreon.com/tristanashlin' );
+}
