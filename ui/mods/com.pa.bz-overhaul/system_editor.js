@@ -1,6 +1,7 @@
 model.biomes.push('bz_luna')
 model.biomes.push('bz_ice')
 model.biomes.push('bz_lava')
+model.biomes.push('bz_mountain')
 
 
 var bztemplates = [

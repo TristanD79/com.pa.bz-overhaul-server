@@ -146,18 +146,113 @@
     ],
     "features": [
         {
+            "layer": 1,
+            "op": "BO_Add",
+            "noise_range": [
+                0.1,
+                0.4
+            ],
+            "cluster_size": 17,
+            "cluster_count_range": [
+                0,
+                13
+            ],
+            "feature_spec": "/pa/terrain/bz_generic/features/scrap_01.json",
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "layer": 2,
+            "op": "BO_Add",
+            "noise_range": [
+                0.15,
+                0.35
+            ],
+            "cluster_size": 12,
+            "cluster_count_range": [
+                0,
+                11
+            ],
+            "feature_spec": "/pa/terrain/bz_generic/features/scrap_02.json",
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
             "layer": 3,
             "op": "BO_Add",
             "noise_range": [
                 0.2,
-                0.4
+                0.3
             ],
-            "cluster_size": 20,
+            "cluster_size": 9,
             "cluster_count_range": [
                 0,
-                15
+                9
             ],
-            "feature_spec": "/pa/terrain/bz_generic/features/scrap_01.json",
+            "feature_spec": "/pa/terrain/bz_generic/features/scrap_03.json",
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "layer": 2,
+            "op": "BO_Add",
+            "noise_range": [
+                0.1,
+                0.15
+            ],
+            "cluster_size": 16,
+            "cluster_count_range": [
+                0,
+                5
+            ],
+            "feature_spec": "/pa/terrain/bz_generic/features/scrap_field_small.json",
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "layer": 4,
+            "op": "BO_Add",
+            "noise_range": [
+                0.15,
+                0.2
+            ],
+            "cluster_size": 14,
+            "cluster_count_range": [
+                0,
+                4
+            ],
+            "feature_spec": "/pa/terrain/bz_generic/features/scrap_field_medium.json",
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "layer": 6,
+            "op": "BO_Add",
+            "noise_range": [
+                0.15,
+                0.22
+            ],
+            "cluster_size": 11,
+            "cluster_count_range": [
+                0,
+                1
+            ],
+            "feature_spec": "/pa/terrain/bz_generic/features/scrap_field_large.json",
             "scale": [
                 1.0,
                 1.0,
@@ -187,15 +282,15 @@
             "layer": 5,
             "op": "BO_Add",
             "noise_range": [
-                0.5,
+                0.6,
                 0.8
             ],
-            "cluster_size": 15,
+            "cluster_size": 10,
             "cluster_count_range": [
                 0,
                 13
             ],
-            "feature_spec": "/pa/terrain/bz_generic/features/scrap_02.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_03.json",
             "scale": [
                 1.0,
                 1.0,
@@ -226,14 +321,15 @@
             "op": "BO_Add",
             "noise_range": [
                 0.4,
-                0.7
+                0.6
             ],
-            "cluster_size": 12,
+            "threshold": 10,
+            "cluster_size": 10,
             "cluster_count_range": [
                 0,
                 11
             ],
-            "feature_spec": "/pa/terrain/bz_generic/features/scrap_03.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_05.json",
             "scale": [
                 1.0,
                 1.0,
@@ -285,12 +381,12 @@
                 0.4,
                 0.6
             ],
-            "cluster_size": 20,
+            "cluster_size": 10,
             "cluster_count_range": [
                 0,
                 5
             ],
-            "feature_spec": "/pa/terrain/bz_generic/features/scrap_field_small.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_08.json",
             "scale": [
                 1.0,
                 1.0,
@@ -304,12 +400,12 @@
                 0.6,
                 0.8
             ],
-            "cluster_size": 18,
+            "cluster_size": 10,
             "cluster_count_range": [
                 0,
                 4
             ],
-            "feature_spec": "/pa/terrain/bz_generic/features/scrap_field_medium.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_09.json",
             "scale": [
                 1.0,
                 1.0,
@@ -366,7 +462,7 @@
                 0,
                 1
             ],
-            "feature_spec": "/pa/terrain/bz_generic/features/scrap_field_large.json",
+            "feature_spec": "/pa/terrain/moon/features/moon_rock_12.json",
             "scale": [
                 1.0,
                 1.0,

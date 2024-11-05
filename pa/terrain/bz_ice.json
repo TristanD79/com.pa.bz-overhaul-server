@@ -6,7 +6,7 @@
     "base_biome": "/pa/terrain/base/base.json",
     "biomes": [
         {
-            "spec": "/pa/terrain/ice/ice.json",
+            "spec": "/pa/terrain/bz_ice/bz_ice.json",
             "temperature": [
                 -1,
                 -0.5,
@@ -24,7 +24,7 @@
             ]
         },
         {
-            "spec": "/pa/terrain/mountain/mountain.json",
+            "spec": "/pa/terrain/bz_mountain/bz_mountain.json",
             "temperature": [
                 -0.8,
                 0.8,
