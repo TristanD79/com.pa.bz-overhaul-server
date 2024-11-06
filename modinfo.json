@@ -20,6 +20,10 @@
         "com.pa.bz-overhaul-client",
         "com.pa.ferretmaster.map-effects-server"
     ],
+    "companions": [
+        "com.pa.bz-overhaul-client",
+        "com.pa.ferretmaster.map-effects-server"
+    ],
     "scenes": {
         "system_editor": [
             "coui://ui/mods/com.pa.bz-overhaul/system_editor.js"
