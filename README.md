@@ -4,7 +4,7 @@ Battlezone: RTS Tactics (server)
 
 com.pa.bz-overhaul-server
 
-![image](https://imgur.com/a/uyIc4PK)
+https://imgur.com/a/uyIc4PK
 
 ## Licensing
 
