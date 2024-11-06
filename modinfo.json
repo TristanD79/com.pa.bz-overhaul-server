@@ -12,33 +12,33 @@
     "icon": "https://i.imgur.com/TEVJLuz.png",
     "priority": 100,
     "category": [
-        "titans", 
+        "titans",
         "units",
-        "faction" 
+        "faction"
     ],
     "dependencies": [
         "com.pa.bz-overhaul-client",
-        "com.pa.ferretmaster.map-effects-server"
+        "com.pa.ferretmaster.map-effects-server",
+        "com.pa.conundrum.cShareSystems"
     ],
     "companions": [
-        "com.pa.bz-overhaul-client",
-        "com.pa.ferretmaster.map-effects-server"
+        "com.pa.bz-overhaul-client"
     ],
     "scenes": {
         "system_editor": [
             "coui://ui/mods/com.pa.bz-overhaul/system_editor.js"
         ],
-		"shared_build": [
+        "shared_build": [
             "coui://ui/mods/com.pa.bz-overhaul/shared_build.js"
-		],
+        ],
         "new_game": [
             "coui://ui/mods/com.pa.bz-overhaul/new_game.js"
         ],
-		"icon_atlas": [
-			"coui://ui/mods/com.pa.bz-overhaul/icon_atlas.js"
+        "icon_atlas": [
+            "coui://ui/mods/com.pa.bz-overhaul/icon_atlas.js"
         ],
         "live_game": [
             "coui://ui/mods/com.pa.bz-overhaul/bz_map_effects.js"
         ]
-	}
+    }
 }
