@@ -178,7 +178,9 @@ var polarBiometalRunEffects = [
     { "planet": 0, "pos": [-794.244140625, 32.91998291015625, -102.26324462890625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
     { "planet": 0, "pos": [-794.244140625, 32.91998291015625, 102.26324462890625], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
     { "planet": 0, "pos": [16.334136962890625, 724.8521728515625, 291.1622314453125], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
-    { "planet": 0, "pos": [16.334136962890625, 724.8521728515625, -291.1622314453125], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" }
+    { "planet": 0, "pos": [16.334136962890625, 724.8521728515625, -291.1622314453125], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [297.6005859375, 315.6014709472656, -657.8350219726562], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" },
+    { "planet": 0, "pos": [297.6005859375, 315.6014709472656, 657.8350219726562], "effectPath": "/pa/effects/specs/geyser_steam.pfx", "boneOffset": [0], "boneOrient": [0], "scale": "1", "snap": "0" }
 ]
 
 //change the name of this to something different
