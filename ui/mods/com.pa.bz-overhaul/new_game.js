@@ -148,7 +148,7 @@ if (!bzNewGameLoaded) {
       _.defer(function () {
         model.localChatMessage(
           loc("!LOC:Battlezone: RTS Tactics Overhaul (Server)"),
-          loc("!LOC:As this is an overhaul only NSDF and CCA factions are recommened to be played against eachother, and have not been balanced against PA factions. To play NSDF select commanders highlighted in blue. To play CCA select commanders highlighted in red.\nPlease select a map starting with prefix 'BZ' as these have been balanced for this mod, and can be found in the Battlezone Maps tab.")
+          loc("!LOC:As this is an overhaul only NSDF and CCA factions are recommened to be played against eachother, and have not been balanced against PA factions. To play NSDF select commanders highlighted in blue. To play CCA select commanders highlighted in red.\nPlease select a map starting with prefix '[BZ]' as these have been balanced for this mod, and can be found in the Battlezone Maps tab.")
         );
       });
     } catch (e) {
