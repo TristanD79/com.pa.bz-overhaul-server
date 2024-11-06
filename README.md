@@ -1,7 +1,6 @@
 # Battlezone: RTS Tactics for Planetary Annihilation: TITANS
 Battlezone: RTS Tactics (server)
 
-
 com.pa.bz-overhaul-server
 
 ![image](https://i.imgur.com/TEVJLuz.png)
