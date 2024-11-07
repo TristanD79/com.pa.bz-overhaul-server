@@ -3,6 +3,24 @@ model.biomes.push('bz_ice')
 model.biomes.push('bz_lava')
 model.biomes.push('bz_mountain')
 
+
+function ChatMessageViewModel(name, type  /* 'invalid' | 'lobby' | 'server' */, payload) {
+  var self = this;
+
+  self.username = ko.observable(name);
+  self.type = type; /* 'invalid' | 'lobby' | 'server' */
+  self.payload = ko.observable(payload);
+}
+
+model.localChatMessageAdvisory = function (name, message) {
+  model.chatMessages.push(new ChatMessageViewModel(name, 'settings', message));
+};
+
+model.localChatMessageWarning = function (name, message) {
+  model.chatMessages.push(new ChatMessageViewModel(name, 'settings', message));
+};
+
+
 var bzNewGameLoaded;
 
 if (!bzNewGameLoaded) {
@@ -111,7 +129,7 @@ if (!bzNewGameLoaded) {
         };
 
         model.isCCA = function (commander) {
-          
+
           return _.includes(ccaCommanders, commander);
         }
 
@@ -147,8 +165,34 @@ if (!bzNewGameLoaded) {
 
       _.defer(function () {
         model.localChatMessage(
-          loc("!LOC:Battlezone: RTS Tactics Overhaul (Server)"),
-          loc("!LOC:As this is an overhaul only NSDF and CCA factions are recommened to be played against eachother, and have not been balanced against PA factions. To play NSDF select commanders highlighted in blue. To play CCA select commanders highlighted in red.\nPlease select a map starting with prefix '[BZ]' as these have been balanced for this mod, and can be found in the Battlezone Maps tab.")
+          loc("!LOC:Battlezone: RTS Tactics (Server)"),
+          loc("!LOC:As this is an overhaul only NSDF and CCA factions are recommened to be played against eachother, and have not been balanced against PA factions. To play NSDF select commanders highlighted in blue. To play CCA select commanders highlighted in red.")
+        );
+      });
+
+      _.defer(function () {
+        model.localChatMessage(
+          loc("!LOC:Battlezone: RTS Tactics (Server)"),
+          loc("")
+        );
+      });
+      _.defer(function () {
+        model.localChatMessageWarning(
+          loc("!LOC:Battlezone: RTS Tactics (Server)"),
+          loc("!LOC:[Advisory] You will need to download the audio to get the intended experience for this mod. If you have not done so please head to the main menu and click the download audio button.")
+        );
+      });
+
+      _.defer(function () {
+        model.localChatMessage(
+          loc("!LOC:Battlezone: RTS Tactics (Server)"),
+          loc("")
+        );
+      });
+      _.defer(function () {
+        model.localChatMessageAdvisory(
+          loc("!LOC:Battlezone: RTS Tactics (Server)"),
+          loc("!LOC:[Advisory] It is highly recommended to play with maps that have the prefix [BZ] at the start as these have been made and balanced for this mod.")
         );
       });
     } catch (e) {
@@ -159,10 +203,21 @@ if (!bzNewGameLoaded) {
   bzNewGame();
 }
 
-var bzLearnMoreOnSteam = function(){
-  engine.call( 'web.launchPage', 'https://steamcommunity.com/app/386070/discussions/0/4703538708010312949' );
+var bzLearnMoreOnSteam = function () {
+  engine.call('web.launchPage', 'https://steamcommunity.com/app/386070/discussions/0/4703538708010312949');
 }
 
-var bzDiscussOnPatreon = function(){
-  engine.call( 'web.launchPage', 'https://www.patreon.com/tristanashlin' );
+var bzDiscussOnPatreon = function () {
+  engine.call('web.launchPage', 'https://www.patreon.com/tristanashlin');
 }
+
+
+
+
+
+
+
+
+
+
+
