@@ -88,7 +88,7 @@
          "effect_spec": ""
       },
       "died": {
-         "audio_cue": "/SE/Death/Veh"
+         "audio_cue": "/SE/Death/large_vehicle"
       }
    },
    "audio": {

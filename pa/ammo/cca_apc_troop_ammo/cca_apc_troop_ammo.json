@@ -12,12 +12,12 @@
     "events": {
         "died": {
             "audio_cue": "/SE/Impacts/impact_soldier_spawn_apc",
-            "effect_spec": "",
+            "effect_spec": "/pa/units/air/unit_shell/unit_shell_deploy.pfx",
             "effect_scale": 0.5
         }
     },
     "model": {
-        "filename": ""
+        "filename": "/pa/units/air/unit_shell_small/unit_shell_small.papa"
     },
     "spawn_unit_on_death": "/pa/units/land/cca_soldier/cca_soldier.json"
 }
