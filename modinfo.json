@@ -1,7 +1,7 @@
 {
     "context": "server",
     "identifier": "com.pa.bz-overhaul-server",
-    "display_name": "Battlezone: RTS Tactics (WIP)",
+    "display_name": "Battlezone: RTS Tactics",
     "description": "A full conversion mod that brings both factions from Battlezone to PA.",
     "author": "Tristan",
     "version": "0.9",
