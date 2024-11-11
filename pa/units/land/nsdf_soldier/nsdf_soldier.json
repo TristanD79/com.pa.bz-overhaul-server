@@ -67,7 +67,7 @@
             "aim_down": "/pa/units/land/nsdf_soldier/nsdf_soldier_anim_aim_down.papa"
         },
         "animtree": "/pa/anim/anim_trees/nsdf_soldier_anim_tree.json",
-        "walk_speed": 20
+        "walk_speed": 5
     },
     "tools": [
         {
