@@ -27,7 +27,23 @@
                     },
                     "node_walk": {
                         "type": "playback",
-                        "anim_name": "walk"
+                        "anim_name": "walk",
+                        "events": [
+                            {
+                                "time": 0.1,
+                                "type": "audio",
+                                "parameters": {
+                                    "cue": "/SE/Movement/infantry"
+                                }
+                            },
+                            {
+                                "time": 0.6,
+                                "type": "audio",
+                                "parameters": {
+                                    "cue": "/SE/Movement/infantry"
+                                }
+                            }
+                        ]
                     }
                 }
             },
