@@ -1,0 +1,1 @@
+{"children":[{"position":[300.0,0.0,0.0],"scale":[1.0,1.0,1.0],"rotation":0.0,"brush_spec":"/pa/terrain/moon/brushes/crater_01.json","op":"BO_Add"},{"position":[-300.0,0.0,0.0],"scale":[0.7,0.7,0.7],"rotation":90.0,"brush_spec":"/pa/terrain/moon/brushes/crater_01.json","op":"BO_Add"}]}

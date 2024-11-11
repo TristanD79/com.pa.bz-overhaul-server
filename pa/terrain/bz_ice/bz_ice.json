@@ -98,7 +98,7 @@
         {
             "group": "basic",
             "layer": 2,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_01.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_01.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
@@ -122,7 +122,7 @@
         {
             "group": "basic",
             "layer": 2,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_02.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_02.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
@@ -146,7 +146,7 @@
         {
             "group": "basic",
             "layer": 2,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_03.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_03.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
@@ -170,7 +170,7 @@
         {
             "group": "basic",
             "layer": 2,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_04.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_04.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
@@ -194,7 +194,7 @@
         {
             "group": "basic",
             "layer": 1,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_05.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_05.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
@@ -219,7 +219,7 @@
         {
             "group": "basic",
             "layer": 1,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_06.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_06.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
@@ -244,7 +244,7 @@
         {
             "group": "basic",
             "layer": 1,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_07.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_07.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
@@ -269,7 +269,7 @@
         {
             "group": "basic",
             "layer": 1,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_08.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_08.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
@@ -294,7 +294,7 @@
         {
             "group": "basic",
             "layer": 1,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_09.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_09.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
@@ -319,7 +319,7 @@
         {
             "group": "basic",
             "layer": 1,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_10.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_10.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
@@ -344,7 +344,7 @@
         {
             "group": "basic",
             "layer": 1,
-            "brush_spec": "/pa/terrain/ice/brushes/ice_cliff_11.json",
+            "brush_spec": "/pa/terrain/bz_ice/brushes/ice_cliff_11.json",
             "op": "BO_Add",
             "proj": "BP_Bend",
             "noise_range": [
