@@ -80,19 +80,11 @@
             "audio_cue": "/SE/Build_Complete/bot"
         },
         "fired": {
-            "audio_cue": "/SE/Weapons/bot/assault_fire",
+            "audio_cue": "/SE/Weapons/g_c_soldier_rifle_fire",
             "effect_spec": ""
         }
     },
     "audio": {
-        "loops": {
-            "move": {
-                "cue": "/SE/Movement/bot/assault_loop",
-                "flag": "vel_changed",
-                "should_start_func": "is_moving",
-                "should_stop_func": "is_not_moving"
-            }
-        },
         "selection_response": {
             "cue": "/SE/Selection/bot/assault"
         }
