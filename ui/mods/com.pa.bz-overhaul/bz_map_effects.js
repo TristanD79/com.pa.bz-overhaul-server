@@ -187,11 +187,11 @@ var polarBiometalRunEffects = [
 function addBzMapEffects() {
     if (model.mapEffects !== undefined) {
         //assign each maps effects here
-        model.mapEffects()['BZ Luna Plains'] = lunaPlainsEffects
-        model.mapEffects()['BZ Luna Maze'] = lunaMazeEffects
-        model.mapEffects()['BZ Lava Pathways'] = lavaPathwaysEffects
-        model.mapEffects()['BZ Overflow'] = overflowEffects
-        model.mapEffects()['BZ Polar Biometal Run'] = polarBiometalRunEffects
+        model.mapEffects()['[BZ] Luna Plains (2v2, 4v4, 6v6)'] = lunaPlainsEffects
+        model.mapEffects()['[BZ] Luna Maze (2v2, 4v4, 6v6+)'] = lunaMazeEffects
+        model.mapEffects()['[BZ] Lava Pathways (2v2, 4v4, 6v6+)'] = lavaPathwaysEffects
+        model.mapEffects()['[BZ] Overflow (2v2, 4v4, 6v6)'] = overflowEffects
+        model.mapEffects()['[BZ] Polar Biometal Run (2v2, 4v4, 6v6+)'] = polarBiometalRunEffects
     }
     else { _.delay(addBzMapEffects, 1000) }//remember to change this as well
 }
