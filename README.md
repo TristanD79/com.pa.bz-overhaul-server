@@ -13,7 +13,7 @@ Licensing is automatically revoked for any projects that do not follow the [Crea
 
 You must publicly distribute your contributions using the same dual licence of [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/) and MIT for software portions containing JavaScript code.
 
-You cannot use Legion Expansion for commercial advantage or any form of monetary compensation.
+You cannot use Battlezone: RTS Tactics for commercial advantage or any form of monetary compensation.
 
 Using a GitHub fork containing all changes will satisfy the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/) requirement to indicate changes made.
 
